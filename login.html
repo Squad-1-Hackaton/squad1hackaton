@@ -10,7 +10,7 @@
 
   <body>
 
-    <header>
+    <header class="header">
       <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="#">Orange Evolution</a>
           
@@ -21,7 +21,7 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div class="navbar-nav">
                   <!-- <a class="nav-item nav-link" href="#">Home</a> -->
-                  <a class="nav-item nav-link active" href="#">Login</a>
+                  <a class="nav-item nav-link active" href="/login.html">Login</a>
                   <a class="nav-item nav-link" href="#">Cadastro</a>
                   <!-- <a class="nav-item nav-link" href="#">Contato</a>  -->
               </div>
@@ -31,25 +31,29 @@
 
     <main>
 
-      <form action="login.js" method="post">
-        <h2>Acesse sua Conta</h2>
-        <input
-          type="email"
-          id="email"
-          name="email-user"
-          aria-label="email"
-          placeholder="E-mail"
-        />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          aria-label="password"
-          placeholder="Senha"
-        />
-        <a href="#">Esqueci minha senha</a>
-        <p>Não possui conta? <span class="destaque">Cadastre-se!</span></p>
-        <button class="entrar">Entrar</button>
+      <form action="login.js" method="post" class="form">
+        <div class="div-inside-form">
+          <h2>Acesse sua Conta</h2>
+          <input
+            type="email"
+            id="email"
+            name="email-user"
+            aria-label="email"
+            placeholder="E-mail"
+          />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            aria-label="password"
+            placeholder="Senha"
+          />
+          <div>
+            <a href="#">Esqueci minha senha</a>
+          </div>
+          <p>Não possui conta? <span class="destaque">Cadastre-se!</span></p>
+          <button class="entrar">Entrar</button>
+        </div>
       </form>
 
     </main>
