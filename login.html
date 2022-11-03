@@ -4,14 +4,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="login.css" />
   </head>
 
   <body>
     <form action="login.js" method="post">
       <h2>Acesse sua Conta</h2>
-      <input type="email" name="email-user" />
-      <input type="password" name="pws-user" />
+      <input
+        type="email"
+        id="email"
+        name="email-user"
+        aria-label="email"
+        placeholder="E-mail"
+      />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        aria-label="password"
+        placeholder="Senha"
+      />
       <a href="#">Esqueci minha senha</a>
       <p>Não possui conta? <span class="destaque">Cadastre-se!</span></p>
       <button class="entrar">Entrar</button>
