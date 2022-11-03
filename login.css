@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    height: 100vh;
+}
+
 header {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -14,16 +18,18 @@ main {
     justify-content: center;
     align-items: center;
     background-color: antiquewhite;
-    height: 31rem;
+    height: 90%;
 }
 
 .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: aqua;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
     height: 20rem;
     width: 20rem;
+    border-radius: 1rem;
 }
 
 .div-inside-form {
@@ -32,9 +38,48 @@ main {
     justify-content: space-around;
     align-items: center;
     background-color: white;
-    height: 20rem;
-    width: 20rem;
+    height: 80%;
+    width: 80%;
+}
 
+.div-forgot-signup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.div-anchor-forgot-password {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: small;
+}
+
+.anchor-forgot-password {
+    text-decoration: none;
+    padding-top: 0.13rem;
+    margin-left: 0.3rem;
+}
+
+.text-forgot {
+    margin-bottom: 0;
+}
+
+.div-signup {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: small;
+}
+
+.signup {
+    text-decoration: none;
+    padding-top: 0.13rem;
+    margin-left: 0.3rem;
+}
+
+.btn-form {
+    width: 100%;
 }
 
 .div-footer {
@@ -47,6 +92,7 @@ footer {
     display: flex;
     justify-content: center;
     margin-bottom: 0;
-    padding-top: 1rem;
+    padding-top: 1.2rem;
     /* background-color: green; */
 }
+

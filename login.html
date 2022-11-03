@@ -34,25 +34,31 @@
       <form action="login.js" method="post" class="form">
         <div class="div-inside-form">
           <h2>Acesse sua Conta</h2>
-          <input
+          <input class="form-control"
             type="email"
             id="email"
             name="email-user"
             aria-label="email"
-            placeholder="E-mail"
+            placeholder="exemplo@gmail.com"
           />
-          <input
+          <input class="form-control"
             type="password"
             id="password"
             name="password"
             aria-label="password"
-            placeholder="Senha"
+            placeholder="****"
           />
-          <div>
-            <a href="#">Esqueci minha senha</a>
+          <div class="div-forgot-signup">
+            <div class="div-anchor-forgot-password">
+              <p class="form-text text-muted text-forgot">Esqueceu sua senha?</p>
+              <a class="anchor-forgot-password" href="#">Clique aqui</a>
+            </div>
+            <div class="div-signup">
+              <p class="form-text text-muted">Não possui conta?</p>
+              <a class="signup" href="#">Cadastre-se</a>
+            </div>
           </div>
-          <p>Não possui conta? <span class="destaque">Cadastre-se!</span></p>
-          <button class="entrar">Entrar</button>
+          <button type="button" class="btn btn-warning entrar btn-form" data-toggle="modal" data-target="#exampleModalCenter">Entrar</button>
         </div>
       </form>
 
