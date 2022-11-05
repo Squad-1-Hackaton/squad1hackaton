@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 5%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    height: 90%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 20rem;
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+.div-inside-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    height: 80%;
+    width: 80%;
+}
+
+.input-cadastro {
+    width: 100%;
+}
+
+.btn-form {
+    width: 100%;
+}
+
+.div-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    padding-top: 1.2rem;
+    height: 5%;
+    /* background-color: green; */
+}
+
