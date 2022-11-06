@@ -4,13 +4,16 @@
 }
 
 body {
-    height: 100vh;
+    height: 100%;
 }
 
 header {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    height: 5%;
+    height: 10%;
+}
+
+.navbar {
+    /* --bs-navbar-brand-padding-y: 0; */
+    height: 5rem;
 }
 
 main {
@@ -19,7 +22,60 @@ main {
     justify-content: center;
     align-items: center;
     background-color: antiquewhite;
-    height: 90%;
+    height: 80%;
+}
+
+#section1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 20rem;
+    background-color: rgb(213, 213, 213);
+    width: 100%;
+}
+
+.section1-logo-orange-evolution {
+    width: 15rem;
+    height: 15rem;
+}
+
+#section2 {
+    height: 40rem;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.section2-div-card {
+    height: 15rem;
+    width: 8rem;
+    border: none;
+}
+
+.section2-icons {
+    width: 10rem;
+    height: 10rem;
+}
+
+#section3 {
+    height: 20rem;
+    background-color: aliceblue;
+    width: 100%;
+}
+
+#section4 {
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
 }
 
 .form {
@@ -27,7 +83,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
     height: 20rem;
     width: 20rem;
     border-radius: 1rem;
@@ -55,14 +110,16 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 10%;
+    color: white;
+    /* background-color: aqua; */
 }
 
 footer {
     display: flex;
     justify-content: center;
-    margin-bottom: 0;
-    padding-top: 1.2rem;
-    height: 5%;
-    /* background-color: green; */
+    /* margin-bottom: 0;
+    padding-top: 1.2rem; */
+    height: 100%;
 }
 
