@@ -1,6 +1,8 @@
-class Errors {
-    constructor(status, message){
-        this.status = status,
-        this.message = message
+class ErrorApp {
+    constructor(message, statusCode = 400){
+        this.message = message,
+        this.statusCode = statusCode
     }
 }
+
+module.exports = ErrorApp

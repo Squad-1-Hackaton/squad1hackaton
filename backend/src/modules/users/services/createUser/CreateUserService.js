@@ -1,15 +1,17 @@
+const errorApp = require('../../../../shared/Errors/Error')
 class CreateUserService {
     constructor (userRepository){
         this.userRepository = userRepository
     }
     
-    async execute({ email, password, nome }) {
-        // LOGICA PARA VERIFICAR SE JÁ EXISTE EMAIL CADASTRADO
+    async execute({ email, password, name }) {
         const userAlreadyExists = await this.userRepository.findByEmail(email)
         
-        if(userAlreadyExists) throw ne
+        if(userAlreadyExists) {
+            throw new errorApp('User already exists')
+        }
 
-        this.userRepository.createUser({ email, password, nome })
+        return this.userRepository.createUser({ email, password, name })
     }
 }
 
