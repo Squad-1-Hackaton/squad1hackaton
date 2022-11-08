@@ -3,7 +3,7 @@ const CreateUserController = require('./CreateUserController')
 const UserRepository = require('../../repositories/UserRepository')
 
 
-const userRepository = new UserRepository
+const userRepository = new UserRepository()
 const createUserService = new  CreateUserService(userRepository)
 const createUserController = new CreateUserController(createUserService)
 

@@ -1,13 +1,13 @@
 class CreateUserController {
-    constructor (createCategoryService){
-        this.createCategoryService = createCategoryService
+    constructor (createUserService){
+        this.createUserService = createUserService
     }
     async handle(request, response){
         const { email, password, name } = request.body;
 
         try{
-            const user = await this.createCategoryService.execute({ email, password, name })
-            return response.status(201).json(JSON.stringify(user))
+            await this.createUserService.execute({ email, password, name })
+            return response.status(201).send()
 
         } catch (err) {
             return response.status(err.statusCode).json({message: err.message})

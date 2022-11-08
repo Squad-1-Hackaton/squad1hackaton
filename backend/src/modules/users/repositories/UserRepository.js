@@ -15,22 +15,28 @@ class UserRepository {
         
         const newUser = new User(email, passwordHash, name)
 
-        const user = await prisma.user.create({
+        await prisma.user.create({
             data: newUser
         })
-        
-        return user
-        
     }
 
     async findByEmail(email) {
-        console.log(email)
-        const userFinded = await prisma.user.findUnique({
-            where: {
-                email,
-            },
-        })
-        return userFinded
+        try {
+            const userFound = await prisma.user.findUnique({
+                where: {
+                    email,
+                },
+            })
+            return userFound
+        } catch (error) {
+            throw new ErrorApp('Database disconected', 500)
+        }
+
+    }
+
+    async loginUser(password, passwordHash){
+        const passwordMatched = await bcrypt.compareSync(password, passwordHash);
+        return passwordMatched
     }
 }
 

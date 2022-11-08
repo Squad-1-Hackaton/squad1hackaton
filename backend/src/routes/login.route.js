@@ -1,12 +1,12 @@
 const express = require("express");
+const loginUserController = require('../modules/users/services/loginUser')
 
 
 const loginRoutes = express.Router();
 
 loginRoutes.post("/", (request, response) => {
-    const { email, password } = request.body;
 
-    return response.send('login')
+    return loginUserController.handle(request, response)
 });
 
 module.exports = loginRoutes;

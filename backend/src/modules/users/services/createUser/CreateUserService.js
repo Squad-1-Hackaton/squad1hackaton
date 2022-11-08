@@ -27,7 +27,7 @@ class CreateUserService {
         }
 
         //VERIFICA SE O USUÁRIO JÁ EXISTE NO BANCO DE DADOS
-        const userAlreadyExists = await this.userRepository.findByEmail(newEmail)
+        const userAlreadyExists =  await this.userRepository.findByEmail(newEmail)
 
         if(userAlreadyExists) {
             throw new ErrorApp('User already exists')
