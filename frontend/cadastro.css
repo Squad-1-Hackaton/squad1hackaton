@@ -70,10 +70,18 @@ main {
     height: 20rem;
     background-color: aliceblue;
     width: 100%;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+}
+
+.section3-div {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; */
+    width: 50rem;
 }
 
 .section4 {
@@ -99,7 +107,7 @@ main {
 .div-inside-form {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     background-color: white;
     height: 80%;
