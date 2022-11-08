@@ -10,44 +10,201 @@
 
     <body>  
         <header class="header">
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark navigation-bar">
                 <a class="navbar-brand" href="#">Orange Evolution</a>                    
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <!-- <a class="nav-item nav-link" href="#">Home</a> -->
-                        <a class="nav-item nav-link" href="./cadastro.html">Login</a>
-                        <a class="nav-item nav-link active" href="#">Cadastro</a>
-                        <!-- <a class="nav-item nav-link" href="#">Contato</a>  -->
+                        <a class="nav-item nav-link active" href="./cadastro.html">Home</a>
+                        <a class="nav-item nav-link" href="#">Sobre a Orange</a>
+                        <a class="nav-item nav-link" href="#parcerias">Parcerias</a>
+                        <a class="nav-item nav-link" href="#canais">Canais</a>
+                        <a class="nav-item nav-link" href="#cadastro">Cadastro</a>
+                        <a class="nav-item nav-link" href="./login.html">Entrar</a>
                     </div>
                 </div>
             </nav>
         </header>
-            <!-- <div>
-            <h1 id="subtitulo">Orange Evolution</h1>
-            <h2 id="titulo">Cadastro</h2>
-            <h2 id="subtitulo">Matrícula Grátis</h2>
-            <br>
-            </div> -->
-            <!-- Início do formulário -->
             
         <main>
-            <form class="form">
-                <h2>Cadastre-se</h2>
-                <div class="div-inside-form">
-                    <input class="form-control input-cadastro" type="text" name="nome" id="nome" placeholder="Nome" required>
-                    <input class="form-control input-cadastro" type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome" required>
-                    <input class="form-control input-cadastro" type="email" name="email" id="email" placeholder="exemplo@gmail.com" required>
-                    <input class="form-control input-cadastro" type="text" name="senha" id="senha" placeholder="Senha" required>
-                    <input class="form-control input-cadastro" type="text" name="confirmar senha" id="confirmar-senha" placeholder="Confirmar senha" required>
-                    <button type="button" class="btn btn-warning entrar btn-form" data-toggle="modal" data-target="#exampleModalCenter">Registrar gratuitamente</button>
+
+            <section class="section1">
+                <!-- <div id="section1-div-text">
+                    <h3>Evolua a sua carreira
+                    <br>em tecnologia!</h3>
+                    <p>Explore conhecimentos que estão transformando
+                    <br>indústrias, negócios e vidas através de trilhas gratuitas
+                    <br>em Desenvolvimento, UX/UI Design e QA!</p>
+                    <button>Quero começar!</button>
+                </div> -->
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Evolua a sua carreira</h3>
+                            <p>
+                                Explore conhecimentos que estão transformando
+                                <br>indústrias, negócios e vidas através de trilhas gratuitas
+                                <br>em Desenvolvimento, UX/UI Design e QA!
+                            </p>
+                            <button class="btn btn-primary">Quero começar!</button>
+                        </div>
+                    </div>
                 </div>
-            </form>
+        
+                <div id="section1-div-img"> 
+                    <img src="./assets-frontend/logo-orange-evolution.png" class="section1-logo-orange-evolution">
+                </div>                
+            </section>
+
+            <section class="section2">
+                <h1>
+                    Nós te ajudamos a dar uma vitaminada
+                    <br>na sua jornada tech!
+                </h1>
+                <h4>A Orange Evolution é para você quer</h4>
+                <div class="section2-div-icons">
+                    <img class="section2-icons" src="./assets-frontend/logo-orange-evolution.png" alt="">
+                    <img class="section2-icons" src="./assets-frontend/logo-orange-evolution.png" alt="">
+                    <img class="section2-icons" src="./assets-frontend/logo-orange-evolution.png" alt="">
+                    <img class="section2-icons" src="./assets-frontend/logo-orange-evolution.png" alt="">
+                    <img class="section2-icons" src="./assets-frontend/logo-orange-evolution.png" alt="">
+                    <!-- <div class="row row-cols-1 row-cols-md-5 g-4">
+                        <div class="col section2-div-card">
+                            <div class="card">
+                                <img src="./assets-frontend/logo-orange-evolution.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">só um textinho aqui</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col section2-div-card">
+                            <div class="card">
+                                <img src="./assets-frontend/logo-orange-evolution.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">só um textinho aqui</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col section2-div-card">
+                            <div class="card">
+                                <img src="./assets-frontend/logo-orange-evolution.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">só um textinho aqui</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col section2-div-card">
+                            <div class="card">
+                                <img src="./assets-frontend/logo-orange-evolution.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">só um textinho aqui</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col section2-div-card">
+                            <div class="card">
+                                <img src="./assets-frontend/logo-orange-evolution.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">só um textinho aqui</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <h2>
+                    O Orange Evolution é para você,
+                    <br>pode chegar!
+                </h2>
+            </section>
+
+            <section class="section3 container">
+
+                <div class="row align-items-center section3-div">
+                    <div class="col">
+                        <div class="card">
+                            <img src="./assets-frontend/1.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">textinho askldjaçlsjda.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="./assets-frontend/2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">textinho askldjaçlsjda.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="./assets-frontend/3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">textinho askldjaçlsjda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row row-cols-1 mw- row-cols-md-3 g-4 section3-div justify-content-evenly">
+                    <div class="col">
+                        <div class="card">
+                            <img src="./assets-frontend/1.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">textinho askldjaçlsjda.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="./assets-frontend/2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a short card.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="./assets-frontend/1.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">textinho aqui resumindo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </section>
+
+            <section class="section4">
+                <form class="form">
+                    <h2>Cadastre-se</h2>
+                    <div class="div-inside-form" id="cadastro">
+                        <input class="form-control input-cadastro" type="text" name="nome" id="nome" placeholder="Nome" required>
+                        <input class="form-control input-cadastro" type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome" required>
+                        <input class="form-control input-cadastro" type="email" name="email" id="email" placeholder="exemplo@gmail.com" required>
+                        <input class="form-control input-cadastro" type="text" name="senha" id="senha" placeholder="Senha" required>
+                        <input class="form-control input-cadastro" type="text" name="confirmar senha" id="confirmar-senha" placeholder="Confirmar senha" required>
+                        <button type="button" class="btn btn-warning entrar btn-form" data-toggle="modal" data-target="#exampleModalCenter">Registrar gratuitamente</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="section5" id="parcerias">
+                <h1>PARCERIAS</h1>
+            </section>
+
+            <section class="section6" id="canais">
+                <h1>CANAIS</h1>
+            </section>
         </main>
 
-        <div class="d-flex justify-content-center div-footer">
+        <div class="d-flex justify-content-center div-footer bg-dark">
             <footer id="footer">
                 Orange Evolution © All Rights Reserved - Squad 1™
             </footer>
