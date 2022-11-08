@@ -7,8 +7,9 @@
         {
             "type": "node",
             "request": "attach",
-            "name": "Debug code",
+            // "protocol": "inspector",
             "restart": true,
+            "name": "Debug",
             "skipFiles": [
                 "<node_internals>/**"
             ],

@@ -8,31 +8,30 @@ const saltRounds = 10;
 class UserRepository {
     async createUser({ email, password, name}){
 
-        //LOGICA PARA VERIFICAR SE O E-MAIL INFORMADO É E-MAIL
-        //LOGICA PARA INFORMAR SE O PASSWORD É COMPOSTO POR LETRAS E NÚMEROS DE, NO MÍNIMO, 6 DÍGITOS
-
         const passwordHash = bcrypt.hashSync(password, saltRounds)
+        if (!passwordHash) {
+            throw new ErrorApp('Problem server', 500)
+        }
         
         const newUser = new User(email, passwordHash, name)
 
         const user = await prisma.user.create({
             data: newUser
-        }) 
+        })
         
         return user
         
     }
 
     async findByEmail(email) {
-        const user = await prisma.user.findUnique({
+        console.log(email)
+        const userFinded = await prisma.user.findUnique({
             where: {
-              email,
+                email,
             },
-          })
-        return user
+        })
+        return userFinded
     }
-
-
 }
 
 module.exports = UserRepository

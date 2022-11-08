@@ -6,7 +6,6 @@ class CreateUserController {
         const { email, password, name } = request.body;
 
         try{
-
             const user = await this.createCategoryService.execute({ email, password, name })
             return response.status(201).json(JSON.stringify(user))
 
