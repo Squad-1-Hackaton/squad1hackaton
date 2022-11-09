@@ -55,7 +55,8 @@ class loginUserService {
                 data:{
                     id_user: userAlreadyExists.id_user,
                     email_user: userAlreadyExists.email,
-                    name_user: userAlreadyExists.name_user
+                    name_user: userAlreadyExists.name_user,
+                    admin_user: userAlreadyExists.admin_user
                 }
             }, jwtKey, {
                 expiresIn:"24h"
