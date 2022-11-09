@@ -16,7 +16,13 @@ header {
 }
 
 .navbar {
-    height: 5rem;
+    height: 3.8rem;
+}
+
+.logo-orange-juice-small {
+    width: 3rem;
+    height: 2rem;
+    margin-left: 1rem;
 }
 
 main {

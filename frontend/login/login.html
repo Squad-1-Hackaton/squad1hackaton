@@ -21,45 +21,30 @@
   </head>
 
   <body>
+
     <header class="header">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <!--<a class="navbar-brand" href="#">Orange Evolution</a> !-->
-        <img
-          class="img-fluid"
-          src="../frontend/assets/logo-orange-juice-small.png"
-          alt=""
-        />
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNavAltMarkup"
-        >
-          <div class="navbar-nav">
-            <!-- <a class="nav-item nav-link" href="#">Home</a> -->
-            <a class="nav-item nav-link active" href="/login.html">Login</a>
-            <a class="nav-item nav-link" href="./cadastro.html">Cadastro</a>
-            <!-- <a class="nav-item nav-link" href="#">Contato</a>  -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navigation-bar">
+          <img class="logo-orange-juice-small" src="../assets/logo-orange-juice-small.png" alt="">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+              <div class="navbar-nav navbar-div-menu">
+                  <a class="nav-item nav-link" href="../cadastro/cadastro.html">Home</a>
+                  <a class="nav-item nav-link" href="#">Sobre a Orange</a>
+                  <a class="nav-item nav-link" href="#parcerias">Parcerias</a>
+                  <a class="nav-item nav-link" href="#canais">Canais</a>
+                  <a class="nav-item nav-link" href="#cadastro">Cadastro</a>
+                  <a class="nav-item nav-link active" href="../login/login.html">Entrar</a>
+              </div>
           </div>
-        </div>
       </nav>
     </header>
 
     <main>
       <form action="login.js" method="post" class="form">
         <div class="div-inside-form">
-          <h2>Acesse sua Conta no Orange Evolution</h2>
+          <h3>Acesse sua Conta no Orange Evolution</h3>
           <input
             class="form-control"
             type="email"
@@ -90,7 +75,7 @@
           </div>
           <button
             type="button"
-            class="btn btn-warning entrar btn-form"
+            class="btn btn-secondary entrar btn-form"
             data-toggle="modal"
             data-target="#exampleModalCenter"
           >
@@ -100,11 +85,9 @@
       </form>
     </main>
 
-    <div class="d-flex justify-content-center div-footer">
-      <footer id="footer">
-        Orange Evolution © All Rights Reserved - Squad 1™
-      </footer>
-    </div>
+    <footer class="footer d-flex justify-content-center bg-dark">
+      Orange Evolution © All Rights Reserved - Squad 1™
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

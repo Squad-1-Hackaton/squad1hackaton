@@ -4,37 +4,32 @@
     box-sizing: border-box;
 }
 
-:root{
-    font-size: 62.5%; /* 1rem = 10px */
-}
-
-html, body {
-    height: 100vh;
+html {
+    height: 100%;
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700px;
+    height: 100%;
 }
 
 header {
-    /*margin-left: 1rem;
-    margin-right: 1rem; */
-    background-color: black;
-    height: 6rem;
+    height: 10%;
 }
 
-a.nav-item.nav-link{
-    color: #FFF; 
-    margin-right: 2rem;
-    font-size: 1.6rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700px;
-
+.navbar {
+    height: 100%;
 }
 
-a.nav-item.nav-link.active{
-    color: #FFF;  
+.navbar-div-menu {
+    margin-right: 1.05rem;
+}
+
+.logo-orange-juice-small {
+    width: 3rem;
+    height: 2rem;
+    margin-left: 1rem;
 }
 
 main {
@@ -43,7 +38,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #FFF;
-    height: 87.8%;
+    height: 80%;
 }
 
 .form {
@@ -52,11 +47,12 @@ main {
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
-    height: 35rem;
-    width: 35rem;
+    height: 25rem;
+    width: 25rem;
     border-radius: 1rem;
     border: 1px solid black;
     border-radius: 2rem;
+    text-align: center;
 }
 
 .div-inside-form {
@@ -68,27 +64,7 @@ main {
     height: 80%;
     width: 70%;
     border-radius: 20rem;
-}
-
-h2 {
-    font-size: 1.6rem;
-    text-align: center;
-    font-weight: 700;
-}
-
-.form-control{
-    width: 100%;
-    height: 15%;
-}
-
-.form-control::placeholder{
-    font-size: 1.4rem;
-}
-
-.btn.btn-warning.entrar.btn-form{
-    height: 13%;
-    font-size: 1.6rem;
-    border-radius: 1rem;
+    font-size: 1rem;
 }
 
 .div-forgot-signup {
@@ -101,7 +77,6 @@ h2 {
     display: flex;
     flex-direction: row;
     width: 100%;
-    font-size: 1.6rem;
 }
 
 .anchor-forgot-password {
@@ -118,7 +93,6 @@ h2 {
     display: flex;
     flex-direction: row;
     width: 100%;
-    font-size: 1.6rem;
 }
 
 .signup {
@@ -131,20 +105,11 @@ h2 {
     width: 100%;
 }
 
-.div-footer {
+footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0;
-    /*padding-top: 1.2rem;*/
-    padding-block: 2.15rem; /*Entender a necessidade*/
-    background-color: black;
-    justify-self: flex-end;  /* Entender a necessidade*/
-    font-size: 1.4rem;
-    
+    align-items: center;
+    height: 10%;
+    color: white;
 }
