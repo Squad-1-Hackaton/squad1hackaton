@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700px;
+    height: 100%;
+}
+
+header {
+    height: 10%;
+}
+
+.navbar {
+    height: 100%;
+}
+
+.navbar-div-menu {
+    margin-right: 1.05rem;
+}
+
+.logo-orange-juice-small {
+    width: 3rem;
+    height: 2rem;
+    margin-left: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    height: 80%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 25rem;
+    width: 25rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.div-inside-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    height: 80%;
+    width: 70%;
+    border-radius: 20rem;
+    font-size: 1rem;
+}
+
+.div-forgot-signup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.div-anchor-forgot-password {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.anchor-forgot-password {
+    text-decoration: none;
+    padding-top: 0.13rem;
+    margin-left: 0.3rem;
+}
+
+.text-forgot {
+    margin-bottom: 0;
+}
+
+.div-signup {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.signup {
+    text-decoration: none;
+    padding-top: 0.13rem;
+    margin-left: 0.3rem;
+}
+
+.btn-form {
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    color: white;
+}
