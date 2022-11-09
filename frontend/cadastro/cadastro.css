@@ -16,7 +16,6 @@ header {
 }
 
 .navbar {
-    /* --bs-navbar-brand-padding-y: 0; */
     height: 5rem;
 }
 
@@ -188,8 +187,6 @@ main {
 .section6-btn {
     width: 15rem;
 }
-
-
 
 footer {
     display: flex;
