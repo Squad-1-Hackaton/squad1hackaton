@@ -89,7 +89,7 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 80rem;
+    width: 60rem;
 }
 
 .section4 {
@@ -156,8 +156,8 @@ main {
 }
 
 .section5-img {
-    width: 350px;
-    height: 227px;
+    width: 15rem;
+    height: 9rem;
 }
 
 .section6 {
