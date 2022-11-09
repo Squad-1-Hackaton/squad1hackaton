@@ -46,14 +46,37 @@ main {
     height: 80%;
 }
 
-.section1 {
+/* .section1 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     height: 20rem;
     background-color: rgb(255, 255, 255);
     width: 100%;
+} */
+
+.section1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 20rem;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.section1-btn {
+    width: 15rem;
+}
+
+.section1-logo-orange-evolution {
+    width: 15rem;
+    height: 15rem;
+}
+
+.div-card-body {
+    background-color: rgb(255, 255, 255);
 }
 
 .section2 {
@@ -62,19 +85,26 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    text-align: center;
+}
+
+.section2-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60rem;
 }
 
 .section3 {
-    height: 30rem;
-    background-color: rgb(234, 234, 234);
+    height: 20rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(185, 185, 185);
 }
 
 .section4 {
