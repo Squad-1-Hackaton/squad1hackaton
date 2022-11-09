@@ -27,6 +27,7 @@ main {
     align-items: center;
     background-color: antiquewhite;
     height: 80%;
+    width: 100%;
 }
 
 .section1 {
@@ -39,9 +40,17 @@ main {
     width: 100%;
 }
 
+.section1-btn {
+    width: 15rem;
+}
+
 .section1-logo-orange-evolution {
     width: 15rem;
     height: 15rem;
+}
+
+.div-card-body {
+    background-color: rgb(213, 213, 213);
 }
 
 .section2 {
@@ -67,12 +76,12 @@ main {
 }
 
 .section3 {
-    height: 20rem;
-    background-color: aliceblue;
+    height: 40rem;
+    background-color: rgb(213, 213, 213);
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -81,8 +90,7 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 50rem;
-    /* background-color: rgb(0, 0, 0); */
+    width: 80rem;
 }
 
 .section4 {
@@ -95,14 +103,22 @@ main {
     background-color: white;
 }
 
-.form {
+.section4-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 20rem;
-    width: 20rem;
+    text-align: center;
+    height: 25rem;
+    width: 25rem;
     border-radius: 1rem;
+    /* border: 1rem;
+    border-color: black; */
+}
+
+.form-title {
+    width: 75%;
+    margin-top: 1rem;
 }
 
 .div-inside-form {
@@ -124,38 +140,63 @@ main {
 }
 
 .section5 {
-    height: 15rem;
-    background-color: rgb(104, 190, 75);
+    height: 25rem;
+    background-color: rgb(213, 213, 213);
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.section6 {
-    height: 20rem;
-    background-color: rgb(220, 161, 34);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.div-footer {
+.section5-div-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.section5-img {
+    width: 350px;
+    height: 227px;
+}
+
+.section6 {
+    height: 40rem;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section6-div-card-body {
+    background-color: white;
+    border-color: white;
+    border: none;
+}
+
+.section6-div-btns {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 10%;
-    color: white;
-    /* background-color: aqua; */
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
 }
+
+.section6-btn {
+    width: 15rem;
+}
+
+
 
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    /* margin-bottom: 0;
-    padding-top: 1.2rem; */
-    height: 100%;
+    align-items: center;
+    height: 5rem;
+    color: white;
 }
 
