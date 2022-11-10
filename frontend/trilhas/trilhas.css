@@ -128,7 +128,7 @@ a barra de progresso some dos cards*/
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(238, 238, 238);
     text-align: center;
 }
 
@@ -156,8 +156,8 @@ a barra de progresso some dos cards*/
 }
 
 .section3-icons {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2.4rem;
+    height: 2.4rem;
 }
 
 .section3-btn {
@@ -171,7 +171,27 @@ a barra de progresso some dos cards*/
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(198, 198, 198);
+    background-color: rgb(255, 255, 255);
+}
+
+.section4-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section4-div-card {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+}
+
+.section4-icons {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 0.5rem;
 }
 
 footer {
