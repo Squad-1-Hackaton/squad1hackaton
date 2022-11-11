@@ -22,9 +22,8 @@ header {
 .navbar-div-menu {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
-    width: 50%;
 }
 
 .loged-navbar-btn {
@@ -37,14 +36,12 @@ header {
     margin-left: 1rem;
 }
 
-main {
+/* main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
     height: 80%;
-}
+} */
 
 /* .section1 {
     display: flex;
@@ -59,11 +56,15 @@ main {
 .section1 {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 20rem;
     background-color: rgb(255, 255, 255);
     width: 100%;
+}
+
+.section1-div {
+    max-width: 40rem;
 }
 
 .section1-btn {
@@ -80,21 +81,42 @@ main {
 }
 
 .section2 {
-    height: 40rem;
-    background-color: rgb(213, 213, 213);
+    height: 25rem;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(213, 213, 213);
+    text-align: center;
+}
+
+.section2-div-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2-div-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.section2-div {
+.section2-divs {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    width: 60rem;
+    width: 15rem;
+    /* text-align: center; */
+}
+
+.section2-icons {
+    width: 10rem;
+    height: 10rem;
 }
 
 /* .section2-div-card {
@@ -109,7 +131,7 @@ a barra de progresso some dos cards*/
 
 /*para aparecer a barra de progresso tbm dá pra usar ' style="width: 25%" ' no HTML*/
 
-.section2-bar1-progress {
+/* .section2-bar1-progress {
     width: 0%;
 }
 
@@ -119,7 +141,7 @@ a barra de progresso some dos cards*/
 
 .section2-bar3-progress {
     width: 75%;
-}
+} */
 
 .section3 {
     height: 25rem;
