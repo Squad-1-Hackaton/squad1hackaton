@@ -39,24 +39,24 @@ class loginUserService {
         const userLogged = _.clone(userAlreadyExists, true)
 
         //COMPARA PASSWORDS DO USUÁRIO CADASTRADO E USUÁRIO DE LOGIN
-        const passwordMatched = await this.userRepository.loginUser(password, userLogged.password_user)
+        const passwordMatched = await this.userRepository.loginUser(password, userLogged.password)
 
         if(!passwordMatched) {
             throw new ErrorApp('Password or e-mail are incorrect.', 401)
         }
 
         //PREPARA VARIÁVEL USERLOGGED PARA ENVIAR AO FRONTEND
-        delete userLogged.password_user
+        delete userLogged.password
         delete userLogged.created_at
 
         //ENVIANDO TOKEN PARA USUÁRIO AUTENTICADO
         if(passwordMatched) {
             let token = jwt.sign({
                 data:{
-                    id_user: userAlreadyExists.id_user,
+                    id_user: userAlreadyExists.id,
                     email_user: userAlreadyExists.email,
-                    name_user: userAlreadyExists.name_user,
-                    admin_user: userAlreadyExists.admin_user
+                    name_user: userAlreadyExists.name,
+                    admin_user: userAlreadyExists.admin
                 }
             }, jwtKey, {
                 expiresIn:"24h"

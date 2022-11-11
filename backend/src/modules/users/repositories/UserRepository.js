@@ -15,14 +15,14 @@ class UserRepository {
         
         const newUser = new User(email, passwordHash, name)
 
-        await prisma.user.create({
+        await prisma.users.create({
             data: newUser
         })
     }
 
     async findByEmail(email) {
         try {
-            const userFound = await prisma.user.findUnique({
+            const userFound = await prisma.users.findUnique({
                 where: {
                     email,
                 },

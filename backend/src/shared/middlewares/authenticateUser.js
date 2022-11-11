@@ -1,15 +1,17 @@
 const jwt = require("jsonwebtoken")
 const jwtKey = process.env.PRIVATE_KEY_JWT
-const ErrorApp = require('../Errors/Error')
+
 
 function authenticateUser(request, response, netx) {
     const token = request.header('Authorization')
 
+    if(!token) return response.status(401).json({message: 'The token is missing'})
+
     jwt.verify(token, jwtKey, (err, decoded) => {
         if(err){
-            throw new ErrorApp('Invalid token',401)
+            return response.status(401).json({message: 'Invalid token'})
         }
-        request.user = decoded
+        request.user = decoded.data
     })
 
     return netx()

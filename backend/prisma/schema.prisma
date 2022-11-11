@@ -10,13 +10,55 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id_user    Int     @id @default(autoincrement())
+model Users {
+  id    Int     @id @default(autoincrement())
   email String  @unique
-  password_user  String
-  name_user String 
-  admin_user Boolean @default(false)
-  created_at DateTime @updatedAt
+  password  String
+  name String 
+  admin Boolean @default(false)
+  created DateTime @updatedAt
+
 
   @@map("users")
 }
+
+model Trails {
+  id    Int     @id @default(autoincrement())
+  name String 
+  contents Contents[]
+  created_at DateTime @updatedAt
+
+  @@map("trails")
+}
+
+model Contents {
+  id Int @id @default(autoincrement())
+  title  String 
+  topic String? @default(" ")
+  provider String?
+  duration String?
+  reference String
+  created_at DateTime @updatedAt
+  trails Trails @relation(fields: [trailId], references: [id])
+  trailId Int
+
+  @@map("contents")
+}
+
+// model Users_Content {
+//   id    Int     @id @default(autoincrement()) 
+//   user  User @relation(fields: [id_user], references: [id])
+//   id_user Int
+//   trail Trails @relation(fields: [id_trail], references: [id])
+//   id_trail Int
+//   content Contents @relation(fields: [id_content], references: [id])
+//   id_content Int
+//   trails String
+//   tittle String
+//   topic String
+//   provider String
+//   duration String
+//   reference String
+//   concluded Boolean
+
+// } 
