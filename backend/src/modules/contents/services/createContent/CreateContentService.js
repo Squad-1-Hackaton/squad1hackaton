@@ -10,7 +10,7 @@ class CreateContentService {
             throw new ErrorApp('Title, reference or trail are missing')
         }
 
-        return this.ContentRepository.createContent({ title, topic, provider, duration, reference, trailId })
+        return this.contentRepository.createContent({ title, topic, provider, duration, reference, trailId })
     }
 }
 

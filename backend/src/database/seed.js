@@ -1,86 +1,44 @@
 const prisma = require('./prisma')
+const UserRepository = require('../modules/users/repositories/UserRepository')
+const CreateUserService = require('../modules/users/services/createUser/CreateUserService')
+
 
 async function main() {
-    const admin = await prisma.user.upsert({
-        where: { email: 'alice@prisma.io' },
-        update: {},
-        create: {
-        email: 'alice@prisma.io',
-        name: 'Alice',
-        posts: {
-            create: {
-            title: 'Check out Prisma with Next.js',
-            content: 'https://www.prisma.io/nextjs',
-            published: true,
-            },
-        },
+    const userRepository = new UserRepository()
+    const createUserService = new CreateUserService(userRepository)
+
+    await createUserService.execute({
+        email: 'admin@gmail.com',
+        password: '123456',
+        name:'Usuário admin'
+    })
+    //EXEMPLO DE QUERY
+    // await prisma.users.findMany({
+    //     include:{
+    //         users_content: {
+    //             select:{
+    //                 id: true,
+    //             },
+    //             include:{
+    //                 trails: true
+    //             }
+    //         }
+    //     }
+    // })
+    await prisma.trails.create({
+        data: {
+            name: 'Trilha UX/UI',
         },
     })
-    const trilhaUX = await prisma.user.upsert({
-        where: { email: 'bob@prisma.io' },
-        update: {},
-        create: {
-        email: 'bob@prisma.io',
-        name: 'Bob',
-        posts: {
-            create: [
-            {
-                title: 'Follow Prisma on Twitter',
-                content: 'https://twitter.com/prisma',
-                published: true,
-            },
-            {
-                title: 'Follow Nexus on Twitter',
-                content: 'https://twitter.com/nexusgql',
-                published: true,
-            },
-            ],
-        },
+    await prisma.trails.create({
+        data: {
+        name: 'Trilha DEV',
         },
     })
-    const trilhaDEV = await prisma.user.upsert({
-        where: { email: 'bob@prisma.io' },
-        update: {},
-        create: {
-        email: 'bob@prisma.io',
-        name: 'Bob',
-        posts: {
-            create: [
-            {
-                title: 'Follow Prisma on Twitter',
-                content: 'https://twitter.com/prisma',
-                published: true,
-            },
-            {
-                title: 'Follow Nexus on Twitter',
-                content: 'https://twitter.com/nexusgql',
-                published: true,
-            },
-            ],
-        },
-        },
-    })
-    const trilhaDEV = await prisma.user.upsert({
-        where: { email: 'bob@prisma.io' },
-        update: {},
-        create: {
-        email: 'bob@prisma.io',
-        name: 'Bob',
-        posts: {
-            create: [
-            {
-                title: 'Follow Prisma on Twitter',
-                content: 'https://twitter.com/prisma',
-                published: true,
-            },
-            {
-                title: 'Follow Nexus on Twitter',
-                content: 'https://twitter.com/nexusgql',
-                published: true,
-            },
-            ],
-        },
-        },
+    await prisma.trails.create({
+        data: {
+        name: 'Trilha DEVOPS'
+        }
     })
 }
 main()

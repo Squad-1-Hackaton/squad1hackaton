@@ -15,9 +15,13 @@ class UserRepository {
         
         const newUser = new User(email, passwordHash, name)
 
-        await prisma.users.create({
-            data: newUser
-        })
+        try {
+            await prisma.users.create({
+                data: newUser
+            })
+        } catch (error) {
+            throw new ErrorApp('Creation failure (db)', 500)
+        }
     }
 
     async findByEmail(email) {
@@ -29,7 +33,7 @@ class UserRepository {
             })
             return userFound
         } catch (error) {
-            throw new ErrorApp('Database disconected', 500)
+            throw new ErrorApp('Search failed (db)', 500)
         }
 
     }

@@ -33,7 +33,7 @@ class loginUserService {
         const userAlreadyExists = await this.userRepository.findByEmail(newEmail)
 
         if(!userAlreadyExists) {
-            throw new ErrorApp('There is no registered user.')
+            throw new ErrorApp('Missing email or password')
         }
 
         const userLogged = _.clone(userAlreadyExists, true)

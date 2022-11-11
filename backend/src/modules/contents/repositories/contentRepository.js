@@ -1,30 +1,40 @@
 const prisma = require('../../../database/prisma');
-const Content = require("../models/Content");
 const ErrorApp = require('../../../shared/Errors/Error');
 
 
-class UserRepository {
+class contentRepository {
     async createContent({ title, topic, provider, duration, reference, trailId }){      
-        const newContent = new Content(title, topic, provider, duration, reference, trailId)
-
-        await prisma.contents.create({
-            data: newContent
-        })
+        try {
+            await prisma.contents.create({
+                data:{
+                    title, 
+                    topic, 
+                    provider, 
+                    duration, 
+                    reference,
+                    trails: {
+                        connect: {
+                            id: Number(trailId)
+                        }
+                    }
+                }
+            })
+        } catch (error) {
+            throw new ErrorApp('Creation failure (db)', 500)
+        }
     }
 
     async deleteContent(id) {
         try {
-            const deleteUser = await prisma.user.delete({
+            await prisma.contents.delete({
                 where: {
-                    id,
+                    id: Number(id),
                 },
             })
-            return deleteUser
         } catch (error) {
-            throw new ErrorApp('Database disconected', 500)
+            throw new ErrorApp('Invalid id', 400)
         }
-
     }
 }
 
-module.exports = UserRepository
+module.exports = contentRepository

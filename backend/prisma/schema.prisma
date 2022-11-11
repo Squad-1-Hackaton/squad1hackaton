@@ -60,5 +60,4 @@ model Contents {
 //   duration String
 //   reference String
 //   concluded Boolean
-
 // } 
