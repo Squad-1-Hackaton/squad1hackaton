@@ -21,9 +21,14 @@ header {
 
 .navbar-div-menu {
     display: flex;
+    max-width: 110rem;
+    min-width: 50rem;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: flex-end;
+}
+
+.navbar-logout {
+    margin-left: 2.5rem;
 }
 
 .loged-navbar-btn {
