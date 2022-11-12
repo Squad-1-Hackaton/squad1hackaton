@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 }
+
 
 html {
     scroll-behavior: smooth;
@@ -11,13 +16,6 @@ body {
     height: 100%;
 }
 
-header {
-    height: 10%;
-}
-
-.navbar {
-    height: 3.8rem;
-}
 
 .logo-orange-juice-small {
     width: 3rem;
@@ -25,26 +23,33 @@ header {
     margin-left: 1rem;
 }
 
+/*
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
     height: 80%;
-    width: 100%;
 }
+*/
 
 .section1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 20rem;
-    background-color: rgb(209, 209, 209);
-    width: 100%;
+    height: 35rem;
+    background-color: #001024;
 }
 
+.card-title{
+    font-weight: 700;
+    font-size: 40px;
+    color:#FFFFFF;
+}
+
+.subtitulo{
+    font-size: 1.25rem;
+    color: #FFFFFF;
+}
+
+/*
 .section1-div {
     max-width: 40rem;
 }
@@ -52,53 +57,54 @@ main {
 .section1-btn {
     width: 15rem;
 }
-
+*/
 .section1-logo-orange-evolution {
     width: 15rem;
     height: 15rem;
 }
 
-.div-card-body {
+/*.div-card-body {
     background-color: rgb(209, 209, 209);
 }
+*/
 
 .section2 {
-    height: 40rem;
-    background-color: white;
+    height: 45rem;
+    background-color: #E5E5E5;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     text-align: center;
 }
 
-.section2-div-card {
+/*.section2-div-card {
     height: 15rem;
     width: 8rem;
     border: none;
-}
+}*/
 
 .section2-icons {
     width: 10rem;
     height: 10rem;
 }
 
+
+
+
 .section3 {
-    height: 25rem;
+    height: 40rem;
     background-color: rgb(213, 213, 213);
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    text-align: center;
+    background-color: #001024;
 }
 
+/*
 .section3-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: center;
+    justify-content: space-around;
+
 }
 
 .section3-divs {
@@ -108,33 +114,55 @@ main {
     align-items: center;
     width: 15rem;
 }
-
+*/
 .section3-icons {
     width: 10rem;
     height: 10rem;
 }
 
 .section4 {
+    height: 40rem;
+    background-color: rgb(213, 213, 213);
+    width: 100%;
+    text-align: center;
+}
+
+.section4{
+    border: 1px solid red
+
+}
+
+form{
+    width: 50%;
+    text-align: center;
+    border: 1px solid red
+
+
+}
+
+
+
+/*
+.section4 {
     height: 30rem;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+
     align-items: center;
     background-color: white;
 }
 
 .section4-form {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+
     align-items: center;
     text-align: center;
     height: 25rem;
     width: 25rem;
     border-radius: 1rem;
     /* border: 1rem;
-    border-color: black; */
+    border-color: black; 
 }
 
 .form-title {
@@ -159,30 +187,26 @@ main {
 .btn-form {
     width: 100%;
 }
-
+*/
 .section5 {
     height: 25rem;
-    background-color: rgb(213, 213, 213);
+    background-color: #001024;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
 }
 
-.section5-div-img {
+/*.section5-div-img {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-}
+}*/
 
 .section5-img {
     width: 15rem;
     height: 9rem;
 }
 
-.section6 {
+/*.section6 {
     height: 40rem;
     background-color: white;
     width: 100%;
@@ -209,6 +233,7 @@ main {
 .section6-btn {
     width: 15rem;
 }
+*/
 
 footer {
     display: flex;
