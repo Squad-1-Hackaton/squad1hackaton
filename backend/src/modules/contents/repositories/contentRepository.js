@@ -3,7 +3,7 @@ const ErrorApp = require('../../../shared/Errors/Error');
 
 
 class contentRepository {
-    async createContent({ title, topic, provider, duration, reference, trailId }){      
+    async createContent({ title, topic, provider, duration, reference, trailId, type }){      
         try {
             await prisma.contents.create({
                 data:{
@@ -12,6 +12,7 @@ class contentRepository {
                     provider, 
                     duration, 
                     reference,
+                    type,
                     trails: {
                         connect: {
                             id: Number(trailId)

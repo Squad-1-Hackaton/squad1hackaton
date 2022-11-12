@@ -13,7 +13,7 @@ const router = express.Router();
 
     router.use('/login', loginRoutes);
     router.use('/registration', registrationRoutes)
-    router.use('/trails', authenticateUser, userIsAdmin, trailsRoutes)
+    router.use('/trails', authenticateUser, trailsRoutes)
     router.use('/content', authenticateUser, userIsAdmin, contentsRoutes)
     
 module.exports = router

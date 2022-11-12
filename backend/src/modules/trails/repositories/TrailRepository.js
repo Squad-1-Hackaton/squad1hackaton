@@ -1,3 +1,4 @@
+const { trails } = require('../../../database/prisma');
 const prisma = require('../../../database/prisma');
 const ErrorApp = require('../../../shared/Errors/Error');
 
@@ -9,9 +10,50 @@ class TrailRepository {
             
             return trailsAvailable
         } catch (error) {
-            throw new ErrorApp('No trails registered', 500)
+            throw new ErrorApp('User not registered on any trail', 400)
         }
     } 
+
+    async findTrailsUser(id){
+        try {
+            const trailsRegisteredByUser = await prisma.users.findUnique({
+                where: {
+                    id: Number(id),
+                },
+                select: {
+                    trails: {
+                        select: {
+                            trailId: true
+                        }
+                    }
+                },
+            })
+
+            const trailsRegistered = trailsRegisteredByUser.trails.map((trailobj) => Object.values(trailobj)).flat()
+            const trailsAvailable = await prisma.trails.findMany({
+                select: {
+                    id: true,
+                    name: true
+                }
+            })
+
+            const trailsAvailableAndRegisteredByUser = trailsAvailable.map((trailObj) => {
+                    if(trailsRegistered.includes(trailObj.id)){
+                        trailObj['registered'] = true
+                    } else {
+                        trailObj['registered'] = false
+                    }
+                    return trailObj
+                }
+            )
+
+
+            
+            return trailsAvailableAndRegisteredByUser
+        } catch (error) {
+            throw new ErrorApp('User not registered', 500)
+        }
+    }
 
     async findTrailById(id){
         try {

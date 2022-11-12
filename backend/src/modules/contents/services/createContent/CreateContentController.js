@@ -3,10 +3,10 @@ class CreateContentController {
         this.createContentService = createContentService
     }
     async handle(request, response){
-        const { title, topic, provider, duration, reference, trailId } = request.body;
+        const { title, topic, provider, duration, reference, trailId, type } = request.body;
 
         try{
-            await this.createContentService.execute({ title, topic, provider, duration, reference, trailId })
+            await this.createContentService.execute({ title, topic, provider, duration, reference, trailId, type })
             return response.status(201).send()
 
         } catch (err) {

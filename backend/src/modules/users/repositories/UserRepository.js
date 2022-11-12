@@ -42,6 +42,40 @@ class UserRepository {
         const passwordMatched = await bcrypt.compareSync(password, passwordHash);
         return passwordMatched
     }
+
+    async findById(idTrail, idUser) {
+        try {
+            const registerFound = await prisma.users.findMany({
+                where: {
+                        id: idUser,
+                },
+                include: {
+                    usersontrails: true
+                }
+            })
+            return registerFound
+        } catch (error) {
+            throw new ErrorApp('User ID invalid', 500)
+        }
+    }
+
+    async registerUserOnTrail(idTrail, idUser){
+
+    }
+
+    async findTrails(idTrail) {
+        try {
+            const trailsAvailable = await prisma.trails.findMany()
+            
+            const trailsIndex = trailsAvailable.map((objTrail) => {
+                return objTrail.id
+            })
+
+            return trailsIndex.includes(parseInt(idTrail))
+        } catch (error) {
+            throw new ErrorApp('There is not trail registered', 400)
+        }
+    }
 }
 
 module.exports = UserRepository
