@@ -38,11 +38,15 @@ main {
 .section1 {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 20rem;
-    background-color: rgb(213, 213, 213);
+    background-color: rgb(209, 209, 209);
     width: 100%;
+}
+
+.section1-div {
+    max-width: 40rem;
 }
 
 .section1-btn {
@@ -55,7 +59,7 @@ main {
 }
 
 .div-card-body {
-    background-color: rgb(213, 213, 213);
+    background-color: rgb(209, 209, 209);
 }
 
 .section2 {
@@ -81,7 +85,7 @@ main {
 }
 
 .section3 {
-    height: 40rem;
+    height: 25rem;
     background-color: rgb(213, 213, 213);
     width: 100%;
     display: flex;
@@ -90,12 +94,24 @@ main {
     align-items: center;
 }
 
-.section3-div {
+.section3-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.section3-divs {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60rem;
+    width: 15rem;
+}
+
+.section3-icons {
+    width: 10rem;
+    height: 10rem;
 }
 
 .section4 {

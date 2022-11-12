@@ -48,16 +48,6 @@ header {
     height: 80%;
 } */
 
-/* .section1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 20rem;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-} */
-
 .section1 {
     display: flex;
     flex-direction: row;
@@ -86,7 +76,7 @@ header {
 }
 
 .section2 {
-    height: 25rem;
+    height: 40rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -96,18 +86,19 @@ header {
     text-align: center;
 }
 
-.section2-div-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
 .section2-div-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.section2-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60rem;
 }
 
 .section2-divs {
@@ -119,24 +110,14 @@ header {
     /* text-align: center; */
 }
 
-.section2-icons {
-    width: 10rem;
-    height: 10rem;
-}
-
-/* .section2-div-card {
+.section2-div-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;    
-} */
+}
 
-/* por algum motivo, quando eu coloco o flexbox acima,
-a barra de progresso some dos cards*/
-
-/*para aparecer a barra de progresso tbm dá pra usar ' style="width: 25%" ' no HTML*/
-
-/* .section2-bar1-progress {
+.section2-bar1-progress {
     width: 0%;
 }
 
@@ -146,7 +127,7 @@ a barra de progresso some dos cards*/
 
 .section2-bar3-progress {
     width: 75%;
-} */
+}
 
 .section3 {
     height: 25rem;
