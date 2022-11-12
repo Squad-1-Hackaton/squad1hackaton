@@ -16,6 +16,7 @@ main {
 
 .section1 {
     background-color: rgb(192, 192, 192);
+    width: 40rem;
 }
 
 .sidebar-header {
@@ -32,6 +33,7 @@ main {
     flex-direction: column;
     padding-left: 2.5rem;
     padding-top: 2rem;
+    width: 80%;
 }
 
 .div-bar {
@@ -43,13 +45,31 @@ main {
 }
 
 .sidebar-menu {
-    background-color: rgb(192, 192, 192);
+    background-color: rgb(231, 231, 231);
     height: 100vh;
     color: black;
     width: 20rem;
     margin-left: 2rem;
+    margin-top: 4rem;
+    margin-right: 3rem;
 }
 
-.teste {
-    background-color: antiquewhite;
+.sidebar-menu-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.input-menu {
+    margin-left: 1rem;
+}
+
+.div-menu-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.done {
+    margin: 0;
 }
