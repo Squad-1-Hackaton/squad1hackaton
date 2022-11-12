@@ -38,7 +38,7 @@ main {
     background-color: #001024;
 }
 
-.card-title{
+.section1-title{
     font-weight: 700;
     font-size: 40px;
     color:#FFFFFF;
@@ -53,11 +53,11 @@ main {
 .section1-div {
     max-width: 40rem;
 }
-
+*/
 .section1-btn {
     width: 15rem;
 }
-*/
+
 .section1-logo-orange-evolution {
     width: 15rem;
     height: 15rem;
@@ -82,19 +82,17 @@ main {
 }*/
 
 .section2-icons {
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
 }
-
-
 
 
 .section3 {
     height: 40rem;
-    background-color: rgb(213, 213, 213);
     width: 100%;
     text-align: center;
     background-color: #001024;
+    color: #E5E5E5;
 }
 
 /*
@@ -120,14 +118,14 @@ main {
     height: 10rem;
 }
 
-.section4 {
+/* .section4 {
     height: 40rem;
     background-color: rgb(213, 213, 213);
     width: 100%;
     text-align: center;
-}
+} */
 
-.section4{
+/* .section4{
     border: 1px solid red
 
 }
@@ -138,31 +136,27 @@ form{
     border: 1px solid red
 
 
-}
+} */
 
-
-
-/*
 .section4 {
     height: 30rem;
     width: 100%;
     display: flex;
-
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: white;
 }
 
 .section4-form {
     display: flex;
-
-
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     height: 25rem;
     width: 25rem;
     border-radius: 1rem;
-    /* border: 1rem;
-    border-color: black; 
 }
 
 .form-title {
@@ -187,11 +181,16 @@ form{
 .btn-form {
     width: 100%;
 }
-*/
+
 .section5 {
-    height: 25rem;
+    height: 20rem;
     background-color: #001024;
     width: 100%;
+    color: rgba(255, 255, 255, 1);
+}
+
+.section5-title {
+    font-weight: 700;
 }
 
 /*.section5-div-img {
@@ -206,16 +205,19 @@ form{
     height: 9rem;
 }
 
-/*.section6 {
+.section6-title{
+    font-weight: 700;
+    font-size: 40px;
+    color: #001024;
+}
+
+.section6 {
     height: 40rem;
     background-color: white;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     align-items: center;
 }
-
+/*
 .section6-div-card-body {
     background-color: white;
     border-color: white;
@@ -229,11 +231,12 @@ form{
     align-items: center;
     height: 50%;
 }
-
+*/
 .section6-btn {
     width: 15rem;
-}
-*/
+    margin-top: 1rem;
+} 
+
 
 footer {
     display: flex;
