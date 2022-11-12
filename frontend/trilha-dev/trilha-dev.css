@@ -34,6 +34,14 @@ main {
     padding-top: 2rem;
 }
 
+.div-bar {
+    width: 80%;
+}
+
+.bar1-progress {
+    width: 25%;
+}
+
 .sidebar-menu {
     background-color: rgb(192, 192, 192);
     height: 100vh;
