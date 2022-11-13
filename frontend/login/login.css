@@ -17,14 +17,23 @@ body{
     height: 100%;
 }
 
+/* nav-header {
+    background-color: #001024;
+}
+
+.navbar-nav {
+    background-color: #001024;
+    color: #FFFBF6;
+} */
+
 .navbar-nav {
     font-weight: 700;
 }
 
-/* #header {
-    width: 100%;
+header {
+    height: 10%;
 }
-
+/* 
 #header .navbar-collapse{
     width: auto;
 }
@@ -83,7 +92,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #FFFBF6;
-    height: 85%;
+    height: 80%;
 }
 
 .form {
@@ -167,6 +176,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 5rem;
+    height: 10%;
     color: white;
+    font-size: 0.75rem;
 }
