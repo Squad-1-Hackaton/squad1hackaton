@@ -45,21 +45,54 @@ class UserRepository {
 
     async findById(idTrail, idUser) {
         try {
-            const registerFound = await prisma.users.findMany({
+            const registerFound = await prisma.users.findUnique({
                 where: {
-                        id: idUser,
+                        id: Number(idUser),
                 },
                 include: {
-                    usersontrails: true
+                    trails: true
                 }
             })
-            return registerFound
+            const existsRegister = registerFound.trails.find((objTrail) => objTrail.trailId === parseInt(idTrail))
+            return existsRegister
         } catch (error) {
             throw new ErrorApp('User ID invalid', 500)
         }
     }
 
     async registerUserOnTrail(idTrail, idUser){
+        try {
+            const contentsTrailsById = await prisma.trails.findUnique({
+                where: {
+                    id: Number(idTrail)
+                }
+            }).contents()
+
+            const contentsForRegister = contentsTrailsById.map((content)=>{
+                const obj = new Object()
+                obj['id_user']=idUser
+                obj['id_trail']=content.trailId
+                obj['id_content']=content.id
+
+                return obj
+            })
+
+            await prisma.usersOnContents.createMany({
+                data: contentsForRegister
+            })
+
+            await prisma.usersOnTrails.create({
+                data: {
+                    userId: Number(idUser),
+                    trailId: Number(idTrail)
+                }
+            })
+        } catch (err) {
+            throw new ErrorApp('User already registered in this trail', 500)
+        }
+    }
+
+    async registerUserOnContent(idTrail, idUser, idContent){
 
     }
 

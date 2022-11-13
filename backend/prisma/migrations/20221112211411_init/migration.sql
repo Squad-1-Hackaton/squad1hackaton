@@ -39,20 +39,24 @@ CREATE TABLE "contents" (
 
 -- CreateTable
 CREATE TABLE "usersontrails" (
+    "id" SERIAL NOT NULL,
     "userId" INTEGER NOT NULL,
     "trailId" INTEGER NOT NULL,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
-    CONSTRAINT "usersontrails_pkey" PRIMARY KEY ("userId","trailId")
+    CONSTRAINT "usersontrails_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "usersoncontents" (
+    "id" SERIAL NOT NULL,
     "id_user" INTEGER NOT NULL,
+    "id_trail" INTEGER NOT NULL,
     "id_content" INTEGER NOT NULL,
-    "concluded" BOOLEAN NOT NULL,
+    "concluded" BOOLEAN NOT NULL DEFAULT false,
+    "updated_at" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "usersoncontents_pkey" PRIMARY KEY ("id_user","id_content")
+    CONSTRAINT "usersoncontents_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
@@ -69,6 +73,9 @@ ALTER TABLE "usersontrails" ADD CONSTRAINT "usersontrails_trailId_fkey" FOREIGN 
 
 -- AddForeignKey
 ALTER TABLE "usersoncontents" ADD CONSTRAINT "usersoncontents_id_user_fkey" FOREIGN KEY ("id_user") REFERENCES "users"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "usersoncontents" ADD CONSTRAINT "usersoncontents_id_trail_fkey" FOREIGN KEY ("id_trail") REFERENCES "trails"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "usersoncontents" ADD CONSTRAINT "usersoncontents_id_content_fkey" FOREIGN KEY ("id_content") REFERENCES "contents"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

@@ -25,15 +25,12 @@ class RegisterUserOnTrailService {
         //VERIFICA SE O USUÁRIO JÁ TEM CADASTRO NESTA TRILHA NO BANCO
         const userAlreadyRegister = await this.userRepository.findById(idTrail, user.id_user)
 
-        if(!userAlreadyRegister) {
-            throw new ErrorApp('Missing email or password')
+        if(userAlreadyRegister !== undefined) {
+            throw new ErrorApp('User already registered in this trail')
         }
 
         //REGISTRA USUÁRIO NA TRILHA
-        // await this.userRepository.
-
-        //ENVIANDO TOKEN PARA USUÁRIO AUTENTICADO
-        
+        await this.userRepository.registerUserOnTrail(idTrail, user.id_user)       
     }
 }
 
