@@ -37,10 +37,7 @@ class TrailRepository {
                 },
             })
 
-            console.log(' trailsRegisteredByUser',trailsRegisteredByUser)
             const trailsRegistered = trailsRegisteredByUser.trails.map((trailobj) => Object.values(trailobj)).flat()
-            console.log(' trailsRegistered',trailsRegistered)
-
             const trailsAvailable = await prisma.trails.findMany({
                 select: {
                     id: true,
@@ -48,7 +45,7 @@ class TrailRepository {
                     contents: true
                 }
             })
-console.log(' trailsAvailable',trailsAvailable)
+
             const trailsAvailableAndRegisteredByUser = trailsAvailable.map((trailObj) => {
                     if(trailsRegistered.includes(trailObj.id)){
                         trailObj['registered'] = true
@@ -58,9 +55,6 @@ console.log(' trailsAvailable',trailsAvailable)
                     return trailObj
                 }
             )
-
-            console.log(' trailsAvailableAndRegisteredByUser',trailsAvailableAndRegisteredByUser)
-            
 
            const ResultTrail = trailsAvailableAndRegisteredByUser.map(trail => {
                 trail.Total_contents = trail.contents.length
@@ -127,8 +121,7 @@ console.log(' trailsAvailable',trailsAvailable)
             return ResultTrail
 
         } catch (error) {
-            //throw new ErrorApp('User not registered', 500)
-             console.log(error)
+            throw new ErrorApp('User not registered', 500)
         }
     }
 
@@ -143,10 +136,8 @@ console.log(' trailsAvailable',trailsAvailable)
             if(foundTrail === null) {
                 throw new ErrorApp('There is no trail registered')
             }
-            
-            return foundTrail
         } catch (error) {
-            throw new ErrorApp('Invalid id')
+            throw new ErrorApp('There is no trail registered')
         }
     }
 
@@ -159,7 +150,7 @@ console.log(' trailsAvailable',trailsAvailable)
             }).contents()
             return contentsAvailable
         } catch(error){
-            throw new ErrorApp('Invalid trail id')
+            throw new ErrorApp('Invalid trail ID')
         }
     }
 
@@ -173,6 +164,60 @@ console.log(' trailsAvailable',trailsAvailable)
         } catch(error){
             throw new ErrorApp('Invalid trail id')
         }
+    }
+
+    async findContentByTrailAndUser(idTrail, user){
+        try{
+            const trailsRegisteredByUser = await prisma.users.findUnique({
+                where: {
+                    id: Number(user.id_user),
+                },
+                include:{
+                     contents:{
+                        select: { 
+                            id_content:true,
+                            concluded: true,
+                            id_trail: true
+                        }
+                     },
+                     trails: {
+                        select: {
+                            trailId: true
+                        }
+                    }
+                },
+            }) 
+            const contentsUser = trailsRegisteredByUser.contents.filter(content => content.id_trail === parseInt(idTrail))
+            
+            if(contentsUser === null || contentsUser === undefined) {
+                throw new ErrorApp('Unregistered user on this trail')
+            }
+    
+            const contentsAvailableByTrail = await this.findContentByTrail(idTrail)
+            
+            const contentsAvailable = contentsAvailableByTrail.map(content => {
+                const classes = contentsUser.find(element => element.id_content === content.id)
+                content.concluded = classes.concluded
+                delete content.created_at
+                return content
+            })
+
+            const contentsConcluded =  contentsAvailable.filter(content => content.concluded === true).length
+            let progress = 0
+            if(contentsAvailable.length > 0){
+                progress = Math.floor((contentsConcluded/contentsAvailable.length)*100)
+            }
+            
+            const contentsResponse = {
+                contents: contentsAvailable,
+                progress: progress
+            }
+    
+            return contentsResponse
+        } catch (err) {
+            throw new ErrorApp('Unregistered user on this trail')
+        }
+        
     }
 }
 

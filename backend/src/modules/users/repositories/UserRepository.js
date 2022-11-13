@@ -109,6 +109,48 @@ class UserRepository {
             throw new ErrorApp('There is not trail registered', 400)
         }
     }
+
+    async findContentById(id){
+        try{
+            const contentFound = await prisma.contents.findUnique({
+                where:{
+                    id: Number(id)
+                }
+            }) 
+    
+            return contentFound
+        } catch (err) {
+            throw new ErrorApp('ID invalid', 500)
+        }
+    }
+
+    async changeConcludedContentByUser(idContent, user) {
+        try {
+            const contentsFound = await prisma.users.findUnique({
+                where: {
+                    id: Number(user.id_user)
+                },
+                include:{
+                    contents: true
+                }
+            })
+
+            const targetContent = contentsFound.contents.find((content) => content.id_content === parseInt(idContent))
+            
+            
+            await prisma.usersOnContents.update({
+                where:{
+                   id: targetContent.id,   
+                },
+                data: {
+                    concluded: !targetContent.concluded
+                }
+            })
+        } catch(err) {
+            throw new ErrorApp('Error on registering content', 500)
+        }
+
+    }
 }
 
 module.exports = UserRepository

@@ -40,7 +40,7 @@ async function main() {
     try {
         await prisma.trails.create({
             data: {
-                name: 'Trilha DEVOPS'
+                name: 'Trilha QA'
             }
         })
     } catch (error) {

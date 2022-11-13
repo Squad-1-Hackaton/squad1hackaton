@@ -4,8 +4,9 @@ class FinAllContentsByTrailController {
     }
     async handle(request, response){
         const { id } = request.params;
+        const { user } = request
         try{
-            const contentsAvailableByTrail = await this.finAllContentsByTrailService.execute({ id })
+            const contentsAvailableByTrail = await this.finAllContentsByTrailService.execute({ id, user })
             return response.status(200).send(contentsAvailableByTrail)
 
         } catch (err) {
