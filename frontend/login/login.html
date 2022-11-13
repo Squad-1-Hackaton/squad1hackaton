@@ -21,39 +21,58 @@
   </head>
 
   <body>
-    <header class="header">
+    <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark navigation-bar">
-        <img
-          class="logo-orange-juice-small"
-          src="../assets/logo-orange-juice-small.png"
-          alt=""
-        />
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNavAltMarkup"
-        >
-          <div class="navbar-nav navbar-div-menu">
-            <a class="nav-item nav-link" href="../cadastro/cadastro.html"
-              >Home</a
-            >
-            <a class="nav-item nav-link" href="#">Sobre a Orange</a>
-            <a class="nav-item nav-link" href="#parcerias">Parcerias</a>
-            <a class="nav-item nav-link" href="#canais">Canais</a>
-            <a class="nav-item nav-link" href="#cadastro">Cadastro</a>
-            <a class="nav-item nav-link active" href="../login/login.html"
-              >Entrar</a
-            >
+        <div class="container-fluid">
+          <img src="../assets/logo-orange-juice-small.png" alt="" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse d-lg-flex justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0 d-flex align-items-center justify-content-center">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./cadastro.html"
+                  >Home</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://digital.fcamara.com.br/orangejuice#rd-section-kw3vk5md"
+                  >Sobre a Orange</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#parcerias">Parcerias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#canais">Canais</a>
+              </li>
+              <li class="nav-item">
+                  
+                <!-- <button class="btn-nav1">Cadastre-se!</button> -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn-nav" href="../login/login.html">Entrar</a>
+                <!-- <button class="btn-nav2">Entrar</button> -->
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -62,25 +81,33 @@
     <main>
       <form action="login.js" method="post" class="form">
         <div class="div-inside-form">
-          <h3>Acesse sua Conta no Orange Evolution</h3>
+          <h3 class="form-title">Acesse sua Conta no Orange Evolution</h3>
           <input
-            class="form-control"
+            class="form-control border border-dark"
             type="email"
             id="email"
-            name="email-user"
+            name="email"
             aria-label="email"
-            placeholder="exemplo@gmail.com"
+            placeholder="Email"
             required
           />
           <input
-            class="form-control"
+            class="form-control border border-dark"
             type="password"
             id="password"
             name="password"
             aria-label="password"
-            placeholder="****"
+            placeholder="Senha"
             required
           />
+          <button
+            type="button"
+            class="btn-form"
+            data-toggle="modal"
+            data-target="#exampleModalCenter"
+          >
+            Entrar
+          </button>
           <div class="div-forgot-signup">
             <div class="div-anchor-forgot-password">
               <p class="form-text text-muted text-forgot">
@@ -89,27 +116,19 @@
               <a class="anchor-forgot-password" href="#">Clique aqui</a>
             </div>
             <div class="div-signup">
-              <p class="form-text text-muted">Não possui conta?</p>
+              <p class="form-text text-muted">
+                Não possui conta?
+              </p>
               <a class="signup" href="#">Cadastre-se</a>
             </div>
           </div>
-          <button
-            type="button"
-            class="btn btn-secondary entrar btn-form"
-            data-toggle="modal"
-            data-target="#exampleModalCenter"
-          >
-            Entrar
-          </button>
         </div>
       </form>
     </main>
 
-    <!--
     <footer class="footer d-flex justify-content-center bg-dark">
       Orange Evolution © All Rights Reserved - Squad 1™
     </footer>
-    <!--
 
     <!--Conteudo em libras-->
     <div vw class="enabled">
