@@ -15,11 +15,7 @@ header {
     height: 10%;
 }
 
-.navbar {
-    height: 3.8rem;
-}
-
-.navbar-div-menu {
+/* .navbar-div-menu {
     display: flex;
     max-width: 110rem;
     min-width: 50rem;
@@ -30,9 +26,21 @@ header {
 .navbar-logout {
     margin-left: 2.5rem;
 }
-
+*/
 .loged-navbar-btn {
+    border-radius: 0.3rem;
+    color: #000000;
+    background-color: rgba(255, 120, 35, 1);
+    width: 22rem;
     height: 2.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.loged-navbar-btn:hover {
+    transition: 300ms;
+    font-size: 1.04rem;
 }
 
 .logo-orange-juice-small {
