@@ -7,8 +7,12 @@ class RegisterUserOnTrailService {
     
     async execute({ idTrail, user }) {
         //LOGICA PARA DADOS FALTANDO
-        if(!idTrail){
+        if(!idTrail || idTrail === ':idTrail'){
             throw new ErrorApp('Missing trail ID')
+        }
+
+        if(!Number.isInteger(parseInt(idTrail))){
+            throw new ErrorApp('ID invalid')
         }
 
         //LOGICA PARA VER SER O ID TRAIL É VÁLIDO

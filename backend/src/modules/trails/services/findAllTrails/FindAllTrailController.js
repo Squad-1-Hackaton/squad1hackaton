@@ -10,7 +10,7 @@ class FindAllTrailController {
             return response.status(200).send(trailsAvailable)
 
         } catch (err) {
-            return response.status(err.statusCode).json({message: err.message})
+            return response.status(err.statusCode).json(err)
         }      
     }
 }

@@ -10,7 +10,7 @@ class DeleteContentController {
             return response.status(200).send({message: 'Content deleted successfully'})
 
         } catch (err) {
-            return response.status(err.statusCode).json({message: err.message})
+            return response.status(err.statusCode).json(err)
         }      
     }
 }

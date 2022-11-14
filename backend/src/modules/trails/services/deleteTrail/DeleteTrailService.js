@@ -7,11 +7,20 @@ class DeleteTrailService {
     
     async execute({ id }) {
         //LOGICA PARA DADOS FALTANDO
-        if(!id){
+        if(!id || id===':id'){
             throw new ErrorApp('ID trail is missing')
         }
 
-        await this.trailRepository.findTrailById(id)
+
+        if(!Number.isInteger(parseInt(id))){
+            throw new ErrorApp('Invalid ID')
+        }
+
+        const foundTrail = await this.trailRepository.findTrailById(id)
+        
+        if(foundTrail === null) {
+            throw new ErrorApp('There is no trail registered')
+        }
 
         const existsContentsInTrails = await this.trailRepository.findContentByTrail(id)
         

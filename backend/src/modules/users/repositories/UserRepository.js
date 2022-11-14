@@ -51,8 +51,12 @@ class UserRepository {
     }
 
     async loginUser(password, passwordHash){
-        const passwordMatched = await bcrypt.compareSync(password, passwordHash);
-        return passwordMatched
+        try {
+            const passwordMatched = await bcrypt.compareSync(password, passwordHash);
+            return passwordMatched
+        } catch (error) {
+            throw new ErrorApp('Problem logging into the application', 500, '#0005')
+        }
     }
 
     async findById(idTrail, idUser) {
@@ -68,7 +72,7 @@ class UserRepository {
             const existsRegister = registerFound.trails.find((objTrail) => objTrail.trailId === parseInt(idTrail))
             return existsRegister
         } catch (error) {
-            throw new ErrorApp('User ID invalid', 500)
+            throw new ErrorApp('Failed to register user in an application trail', 500, '#0016')
         }
     }
 
@@ -100,7 +104,7 @@ class UserRepository {
                 }
             })
         } catch (err) {
-            throw new ErrorApp('User already registered in this trail', 500)
+            throw new ErrorApp('Failed to register user in an application trail', 500, '#0017')
         }
     }
 
@@ -118,7 +122,7 @@ class UserRepository {
 
             return trailsIndex.includes(parseInt(idTrail))
         } catch (error) {
-            throw new ErrorApp('There is not trail registered', 400)
+            throw new ErrorApp('Failed to register user in an application trail', 500, '#0018')
         }
     }
 
@@ -132,7 +136,7 @@ class UserRepository {
     
             return contentFound
         } catch (err) {
-            throw new ErrorApp('ID invalid', 500)
+            throw new ErrorApp('Failed to register content as seen', 500, '#0019')
         }
     }
 
@@ -159,7 +163,7 @@ class UserRepository {
                 }
             })
         } catch(err) {
-            throw new ErrorApp('Error on registering content', 500)
+            throw new ErrorApp('Failed to register content as seen', 500, '#0020')
         }
 
     }

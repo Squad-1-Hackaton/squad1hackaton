@@ -6,7 +6,7 @@ class CreateContentService {
     
     async execute({ title, topic, provider, duration, reference, trailId, type }) {
         //LOGICA PARA DADOS FALTANDO
-        if(!title || !reference || !trailId){
+        if(!title || !reference || !trailId || !type){
             throw new ErrorApp('Title, reference or trail are missing')
         }
 
@@ -14,7 +14,17 @@ class CreateContentService {
             throw new ErrorApp('Type invalid')
         }
 
-        return this.contentRepository.createContent({ title, topic, provider, duration, reference, trailId, type })
+        if(!Number.isInteger(parseInt(trailId))){
+            throw new ErrorApp('ID trail invalid')
+        }
+
+        const foundTrail = await this.contentRepository.findTrailByIdRegisterContent(trailId)
+
+        if(foundTrail === null){
+            throw new ErrorApp('Trail not registered in the system')
+        }
+
+        await this.contentRepository.createContent({ title, topic, provider, duration, reference, trailId, type })
     }
 }
 

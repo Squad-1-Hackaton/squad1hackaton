@@ -7,13 +7,17 @@ class FinAllContentsByTrailService {
     
     async execute({ id, user }) {
         //LOGICA PARA DADOS FALTANDO
-        if(!id){
+        if(!id || id === ':id'){
             throw new ErrorApp('ID trail is missing')
+        }
+
+        if(!Number.isInteger(parseInt(id))){
+            throw new ErrorApp('ID invalid trail')
         }
 
         await this.trailRepository.findTrailById(id)
     
-        const contentsAvailableByTrail = await this.trailRepository.findContentByTrail(id)
+        const contentsAvailableByTrail = await this.trailRepository.findTrailByIdOnContents(id)
 
         if( contentsAvailableByTrail.length === 0 ) {
             throw new ErrorApp("There is no content registered for this trail")

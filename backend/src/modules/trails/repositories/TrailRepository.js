@@ -10,7 +10,7 @@ class TrailRepository {
             
             return trailsAvailable
         } catch (error) {
-            throw new ErrorApp('User not registered on any trail', 400)
+            throw new ErrorApp('Error finding tracks in the application', 500, '#0014')
         }
     } 
 
@@ -121,7 +121,22 @@ class TrailRepository {
             return ResultTrail
 
         } catch (error) {
-            throw new ErrorApp('User not registered', 500)
+            throw new ErrorApp('Error finding tracks in the application', 500, '#0015')
+        }
+    }
+
+    async findTrailByIdOnContents(id){
+        try {
+            const foundTrail = await prisma.trails.findUnique({
+                where: {
+                    id: Number(id)
+                }
+            })
+
+            return foundTrail
+            
+        } catch (error) {
+            throw new ErrorApp('Houve algum problema ao encontrar conteúdos para a trilha informada no servidor',500,'#0021')
         }
     }
 
@@ -133,11 +148,10 @@ class TrailRepository {
                 }
             })
 
-            if(foundTrail === null) {
-                throw new ErrorApp('There is no trail registered')
-            }
+            return foundTrail
+            
         } catch (error) {
-            throw new ErrorApp('There is no trail registered')
+            throw new ErrorApp('Failed to delete trail',500,'#0006')
         }
     }
 
@@ -149,8 +163,8 @@ class TrailRepository {
                 }
             }).contents()
             return contentsAvailable
-        } catch(error){
-            throw new ErrorApp('Invalid trail ID')
+        } catch (error) {
+            throw new ErrorApp('Failed to delete trail',500,'#0007')
         }
     }
 
@@ -159,10 +173,10 @@ class TrailRepository {
             await prisma.trails.delete({
                 where: {
                     id: Number(id)
-                }
+                }   
             })
-        } catch(error){
-            throw new ErrorApp('Invalid trail id')
+        } catch (error) {
+            throw new ErrorApp('Failed to delete trail',500,'#0008')
         }
     }
 

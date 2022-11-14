@@ -7,8 +7,12 @@ class RegisterUserOnContentService {
     
     async execute({ idContent, user }) {
         //LOGICA PARA DADOS FALTANDO
-        if(!idContent){
+        if(!idContent || idContent === ':idContent'){
             throw new ErrorApp('Missing id content')
+        }
+
+        if(!Number.isInteger(parseInt(idContent))){
+            throw new ErrorApp('Invalid ID content')
         }
 
         //LOGICA PARA NÃO PERMITIR ADMIN SE REGISTRAR EM CONTEUDO

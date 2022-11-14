@@ -21,7 +21,7 @@ class loginUserService {
         const isEmail = newEmail.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)
 
         if(isEmail === null || isEmail.length > 1){
-            throw new ErrorApp('E-mail invalid.')
+            throw new ErrorApp('Invalid email format')
         }
 
         //LOGICA PARA INFORMAR SE O PASSWORD É COMPOSTO POR LETRAS E NÚMEROS DE, NO MÍNIMO, 6 DÍGITOS
@@ -33,7 +33,7 @@ class loginUserService {
         const userAlreadyExists = await this.userRepository.findByEmailLogin(newEmail)
 
         if(!userAlreadyExists) {
-            throw new ErrorApp('Password or e-mail are incorrect.')
+            throw new ErrorApp('Password or e-mail are incorrect')
         }
 
         const userLogged = _.clone(userAlreadyExists, true)
@@ -42,7 +42,7 @@ class loginUserService {
         const passwordMatched = await this.userRepository.loginUser(password, userLogged.password)
 
         if(!passwordMatched) {
-            throw new ErrorApp('Password or e-mail are incorrect.', 401)
+            throw new ErrorApp('Password or e-mail are incorrect', 401)
         }
 
         //PREPARA VARIÁVEL USERLOGGED PARA ENVIAR AO FRONTEND
