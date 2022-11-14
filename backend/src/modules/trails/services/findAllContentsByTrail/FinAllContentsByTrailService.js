@@ -15,10 +15,13 @@ class FinAllContentsByTrailService {
             throw new ErrorApp('ID invalid trail')
         }
 
-        await this.trailRepository.findTrailById(id)
+        await this.trailRepository.findContentByTrailALL(id)
     
         const contentsAvailableByTrail = await this.trailRepository.findTrailByIdOnContents(id)
 
+        if(contentsAvailableByTrail === null){
+            throw new ErrorApp("There is no trail registered in application")
+        }
         if( contentsAvailableByTrail.length === 0 ) {
             throw new ErrorApp("There is no content registered for this trail")
         }

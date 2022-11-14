@@ -136,7 +136,7 @@ class TrailRepository {
             return foundTrail
             
         } catch (error) {
-            throw new ErrorApp('Houve algum problema ao encontrar conteúdos para a trilha informada no servidor',500,'#0021')
+            throw new ErrorApp('There was a problem finding content for the given trail on the server',500,'#0021')
         }
     }
 
@@ -180,9 +180,24 @@ class TrailRepository {
         }
     }
 
+    async findContentByTrailALL (id){
+        try {
+            const contentsAvailable = await prisma.trails.findUnique({
+                where: {
+                    id: Number(id),
+                }
+            }).contents()
+            return contentsAvailable
+        } catch (error) {
+            throw new ErrorApp('There was a problem finding content for the given trail on the server',500,'#0026')
+        }
+    }
+
     async findContentByTrailAndUser(idTrail, user){
+
+        let trailsRegisteredByUser
         try{
-            const trailsRegisteredByUser = await prisma.users.findUnique({
+            trailsRegisteredByUser = await prisma.users.findUnique({
                 where: {
                     id: Number(user.id_user),
                 },
@@ -200,38 +215,70 @@ class TrailRepository {
                         }
                     }
                 },
-            }) 
-            const contentsUser = trailsRegisteredByUser.contents.filter(content => content.id_trail === parseInt(idTrail))
-            
-            if(contentsUser === null || contentsUser === undefined) {
-                throw new ErrorApp('Unregistered user on this trail')
-            }
-    
-            const contentsAvailableByTrail = await this.findContentByTrail(idTrail)
-            
-            const contentsAvailable = contentsAvailableByTrail.map(content => {
-                const classes = contentsUser.find(element => element.id_content === content.id)
-                content.concluded = classes.concluded
-                delete content.created_at
-                return content
             })
+        }
+        catch(err){
+            throw new ErrorApp('There was a problem finding content for the given trail on the server',500,'#0022')
+        }
 
+        let contentsUser
+        try{
+            contentsUser = trailsRegisteredByUser.contents.filter(content => content.id_trail === parseInt(idTrail))
+            
+            if(!user.admin_user && contentsUser.length === 0) {
+                throw Error()
+            }
+        } catch(err){
+            throw new ErrorApp('Unregistered user on this trail',400)
+        }
+
+        let contentsAvailableByTrail
+        try {
+            contentsAvailableByTrail = await this.findContentByTrailALL(idTrail)
+        } catch (err) {
+            throw new ErrorApp('There was a problem finding content for the given trail on the server',500,'#0025')
+        }
+
+        let contentsResponse
+
+        if(user.admin_user){
+            contentsResponse = {
+                contents: contentsAvailableByTrail
+            }
+
+            return contentsResponse
+        }
+        
+        let contentsAvailable
+        try {           
+                contentsAvailable = contentsAvailableByTrail.map(content => {
+                    const classes = contentsUser.find(element => element.id_content === content.id)
+                    content.concluded = classes.concluded
+                    delete content.created_at
+                    return content
+                })
+        }
+        catch(err) {
+            throw new ErrorApp('User not registered on the trail')
+        }
+        
+        try{
             const contentsConcluded =  contentsAvailable.filter(content => content.concluded === true).length
             let progress = 0
             if(contentsAvailable.length > 0){
                 progress = Math.floor((contentsConcluded/contentsAvailable.length)*100)
             }
             
-            const contentsResponse = {
+            contentsResponse = {
                 contents: contentsAvailable,
                 progress: progress
             }
-    
-            return contentsResponse
+
         } catch (err) {
-            throw new ErrorApp('Unregistered user on this trail')
+            throw new ErrorApp('There was a problem finding content for the given trail on the server',500,'#0024')
         }
-        
+
+        return contentsResponse  
     }
 }
 
