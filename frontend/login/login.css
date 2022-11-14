@@ -6,6 +6,9 @@
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
+:root{
+    font-size: 62.5%;
+}
 
 html {
     height: 100%;
@@ -73,7 +76,7 @@ header {
     border-style: solid;
     border-width: 0.1rem;
     border-color: #00C19C;
-    border-radius: 0.3rem;
+    border-radius: 0.6rem;
     color: #000000;
     background-color: #00C19C;
     width: 5rem;
@@ -101,8 +104,8 @@ main {
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
-    height: 25rem;
-    width: 25rem;
+    /*height: 25rem;
+    width: 25rem;*/
     border-radius: 2rem;
     text-align: center;
     -webkit-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.52); 
@@ -111,7 +114,7 @@ main {
 
 .form-title {
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.8rem;
 }
 
 .div-inside-form {
@@ -120,7 +123,7 @@ main {
     justify-content: space-around;
     align-items: center;
     background-color: white;
-    height: 80%;
+    height: 30rem;
     width: 70%;
     border-radius: 20rem;
     font-size: 1rem;
@@ -179,4 +182,19 @@ footer {
     height: 10%;
     color: white;
     font-size: 0.75rem;
+}
+
+@media (max-width: 300px) {
+
+
+    .form-text  {
+        align-items: center;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .anchor-forgot-password{
+        align-items: center;
+        text-align: center;
+        font-size: 0.8rem;
+    }
 }
