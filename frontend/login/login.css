@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background-color: #FFFBF6;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700px;
+    height: 100%;
+}
+
+/* nav-header {
+    background-color: #001024;
+}
+.navbar-nav {
+    background-color: #001024;
+    color: #FFFBF6;
+} */
+
+
+.navbar-nav {
+    font-weight: 700;
+}
+
+
+/* #header .navbar-collapse{
+    width: auto;
+} */
+
+/* 
+#header .navbar-collapse{
+    width: auto;
+}
+@media (max-width: 991.98) {
+    #header .navbar-collapse,
+    .container-fluid{
+        width: 100%;
+    }
+} */
+
+.logo-orange-juice-small {
+    width: 3rem;
+    height: 2rem;
+    margin-left: 1rem;
+}
+
+.btn-nav1 {
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: rgba(255, 120, 35, 1);
+    border-radius: 0.3rem;
+    color: #000000;
+    background-color: rgba(255, 120, 35, 1);
+    width: 8rem;
+    height: 2.5rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+.btn-nav1:hover {
+    transition: 300ms;
+    background-color: #CC601C;
+}
+
+.btn-nav2 {
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #00C19C;
+    border-radius: 0.3rem;
+    color: #000000;
+    background-color: #00C19C;
+    width: 5rem;
+    height: 2.5rem;
+    font-weight: 700;
+}
+
+.btn-nav2:hover {
+    transition: 300ms;
+    background-color: #009A7D;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFBF6;
+    height: 94.25%;
+    
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 24rem;
+    border-radius: 2rem;
+    text-align: center;
+    -webkit-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.52); 
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.52);
+}
+
+
+.form-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+}
+
+.div-inside-form {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-around;*/
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 20rem;
+    width: 60%;
+    border-radius: 20rem;
+    font-size: 1rem;
+}
+
+
+.form-control{
+    /*padding: 0.6rem!important;*/
+    margin: 0.25rem;
+}
+
+.div-forgot-signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.div-anchor-forgot-password {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.anchor-forgot-password {
+    text-decoration: none;
+    padding-top: 0.26rem;
+    margin-left: 0.3rem;
+    font-size: 0.875rem;
+}
+
+.form-text {
+    margin-bottom: 0;
+}
+
+
+.div-signup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.signup {
+    text-decoration: none;
+    margin-left: 0.3rem;
+    font-size: 0.875rem;
+    padding-top: 0.26rem;
+}
+
+.btn-form {
+    width: 100%;
+    background-color: rgba(255, 120, 35, 1);
+    height: 2.375rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.btn-form:hover {
+    background-color: #CC601C;
+}
+
+
+@media (max-width: 430px) {
+.form-title{
+    font-size: 1rem;
+}
+
+    .div-anchor-forgot-password{
+        flex-direction: column;
+        font-size: .8rem;
+    }
+    .div-signup{
+        flex-direction: column;
+        font-size: .8rem;
+    }
+        
+}
+
+
+@media (max-width: 320px) {
+    .form-title{
+        font-size: 1rem;
+    }
+    
+    .text-forgot{
+        font-size: .8rem;
+    }
+
+    .anchor-forgot-password{
+        font-size: .8rem; 
+    }
+
+    .div-signup{
+        flex-direction: column;
+        font-size: .8rem;
+    }
+
+    .signup{
+        font-size: .8rem;
+    }
+
+    .btn-form{
+        margin: 0.3rem;
+    }
+            
+}

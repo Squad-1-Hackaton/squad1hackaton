@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100%;
+    background-color: rgba(255, 251, 246, 1);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.section1-btn {
+    background-color: rgba(255, 120, 35, 1);
+    height: 2.5rem;
+    width: 14rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+/* .section1 {
+    background-color: rgb(192, 192, 192);
+    width: 80rem;
+} */
+
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.sidebar-description {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    width: 80%;
+}
+
+.div-bar {
+    width: 80%;
+}
+
+.bar1-progress {
+    width: 25%;
+    background-color: #00C19C;
+}
+
+/* .progress {
+    --bs-progress-bar-bg: #00c19c;
+} */
+
+.title-track {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2rem;
+    background-color: #FF5A23;
+    height: 3rem;
+    padding-top: 0.4rem;
+}
+
+.sidebar-menu {
+    height: 100vh;
+    width: 23.375rem;
+    color: rgb(255, 255, 255);
+    margin-top: 2rem;
+}
+
+.sidebar-menu-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.input-menu {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.div-menu-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* .done {
+    margin: 0;
+} */
+
+.bi-lock-fill {
+    /* width: 1rem;
+    height: 1rem; */
+    margin-bottom: 0.3rem;
+    margin-left: 0.7rem;
+}
+
+.header-content {
+    background-color: #001024;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section2-author {
+    color: #fff;
+    background-color: #00C19C;
+    width: 16.5625rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    padding-top: 0.2rem;
+    margin-bottom: 0;
+}
+
+.section2-btn {
+    background-color: rgba(255, 120, 35, 1);
+    height: 2.5rem;
+    width: 14rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.bi-chevron-right {
+    margin-bottom: 0.1rem;
+    margin-left: 0.3rem;
+}
+
+.div-info-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-topic {
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+
+.content-time {
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+
+.div-content {
+    text-align: justify;
+    padding: 6rem;
+}
