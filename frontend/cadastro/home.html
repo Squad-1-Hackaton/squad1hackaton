@@ -66,10 +66,10 @@
               <a class="nav-link" href="#canais">Canais</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#cadastro">Cadastre-se</a>
+              <a class="nav-link btn btn-nav1" href="#form">Cadastre-se</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../login/login.html">Entrar</a>
+              <a class="nav-link btn btn-nav2" href="../login/login.html">Entrar</a>
             </li>
           </ul>
         </div>
@@ -81,9 +81,9 @@
 <main>
     <!-- SECTION 1 -->
   <div class="container-fluid section1">
-    <div class="row">
+    <div class="row col-10 m-auto">
       <div class="col-md-1 col-lg-1"></div>
-        <div class="col-md-12 col-lg-6">
+        <div class="col-md-12 col-lg-6 d-flex align-items-center">
           <div class="sub-section1">
             <h1 class="titulo-inicial">Evolua a sua carreira na tecnologia!</h1>
             <p class="subtitulo">
@@ -91,7 +91,7 @@
               vidas através de trilhas gratuitas em Desenvolvimento, UX/UI Design
               e QA!
             </p>
-            <a href="#cadastro"><button class="section1-btn-cadastro">Quero começar!</button></a>  
+            <a href="#form"><button class="section1-btn-start">Quero começar!</button></a>  
           </div>
         </div>
       <div class="col-md-12 col-lg-4">
@@ -140,11 +140,11 @@
 
 
   <!--d-flex flex-column align-items-center-->
-  <!-- SECTION 3 -->
+
     <!-- SECTION 3 -->
-    <div class="container-fluid d-flex flex-column align-items-center section3">
+    <div class="container-fluid d-flex flex-column align-items-center justify-content-center section3">
       <div class="container-fluid col-10 m-auto">
-        <div class="row">
+        <div class="row d-flex flex-row justify-content-center align-items-center">
           <h2>QUAIS TRILHAS POSSO FAZER?</h2>
 
           <div class="col"> 
@@ -166,7 +166,7 @@
     
 
   <!-- SECTION 4 - FORMULÁRIO-->
-  <div class="container-fluid d-flex flex-column align-items-center section4">
+  <div class="container-fluid d-flex flex-column align-items-center section4" id="form">
     <h3>VAMOS EMBARCAR JUNTOS NESSA JORNADA?</h3>
     <form action="" method="post" class="form">
       <div class="div-inside-form">
@@ -205,13 +205,7 @@
             placeholder="Confirmar senha"
             required
           />
-        <button
-          type="button"
-          class="btn-form"
-          data-toggle="modal"
-          data-target="#exampleModalCenter"
-        >Acessar trilhas gratuitamente!
-        </button>
+          <a href="#form"><button class="section4-btn">Acessar trilhas gratuitamente</button></a>
       </div>
     </form>
   </div>
@@ -222,7 +216,7 @@
     <div class="container-fluid col-10 m-auto">
       
       <div class="row">
-        <h2>QUEM APOIA</h2>
+        <h2 class="section5-title">QUEM APOIA</h2>
       </div>
 
       <div class="row section5-group-imgs">
@@ -249,9 +243,9 @@
 
     <!-- SECTION 6 -->
     <div class="container-fluid d-flex flex-column align-items-center section6">
-      <div class="container-fluid col-10 m-auto">
+      <div class="container-fluid col-10">
         <div class="row">
-          <div class="col m-5">
+          <div class="col m-5 section6-div-body-txt">
             <h2 class="card-title section6-title">Nós temos uma missão...</h1>
             <h3>
               Conectar pessoas com os mesmos interesses enquanto você aprende
@@ -265,34 +259,32 @@
               Aqui a troca de conhecimento é constante,
               <strong>vem fazer esse suco de laranja com a gente!</strong>
             </p>
-            <a class="btn btn-secondary section6-btn" href="#cadastro"
-              >Quero começar!</a
-            >
+            <!-- <a href="#form"><button class="section6-btn">Quero começar!</button></a> -->
           </div>
           
           <div class="container-fluid col m-5 d-flex flex-column justify-content-center align-items-center">
             
-              <button class="btn btn-secondary section6-btn">
+              <button class="section6-btn">
                 <b>Acesse o Discord</b>
               </button>
 
             
-              <button class="btn btn-secondary section6-btn">
+              <button class="section6-btn">
                 <b>Acesse o Medium</b>
               </button>
 
             
-              <button class="btn btn-secondary section6-btn">
+              <button class="section6-btn">
                 <b>Acesse o YouTube</b>
               </button>
 
             
-              <button class="btn btn-secondary section6-btn">
+              <button class="section6-btn">
                 <b>Acesse o Twitch</b>
               </button>
 
             
-              <button class="btn btn-secondary section6-btn">
+              <button class="section6-btn">
                 <b>Acesse o Spotify</b>
               </button>
           </div>
