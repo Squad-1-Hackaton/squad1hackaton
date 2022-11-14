@@ -41,6 +41,10 @@ a.nav-link{
     padding: 30px 0;
 }
 
+.sub-section1{
+    padding-bottom: 40px;
+}
+
 .titulo-inicial{
     font-weight: 700;
     font-size: 4rem;
