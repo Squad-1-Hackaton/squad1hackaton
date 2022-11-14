@@ -33,24 +33,22 @@ a.nav-link{
     font-size: 1.6rem;
 }
 
-.section1-btn{
-    width: 20rem;
-    height: 4.8rem;
-    background-color: var(--laranja-primaria);
+.btn-nav1{
+    width: 12rem;
+    height: 3.8rem;
+    background-color: var(--laranja-primaria)!important;
     border-radius: 0.8rem;
     font-size: 1.6rem;
     font-weight: 700;
     border: none;
-    margin: 1rem 1rem 1rem 0;
-    text-decoration: none;
-    color: #000000;
+    color: #000000!important;
+    margin: 0.7rem;
+    text-align: center;
 }
 
-.section1-btn:hover{
-    background-color: var(--laranja-hover);
+.btn-nav1:hover{
+    background-color: var(--laranja-hover)!important;
     transition: all 0.5s;
-    color: #000000;
-}
 }
 
 .btn-nav2{
@@ -91,19 +89,23 @@ a.nav-link{
     color: #FFFFFF;
 }
 
-.section1-btn-start{
-    width: 16.9rem;
-    height: 3.8rem;
+.section1-btn{
+    width: 20rem;
+    height: 4.8rem;
     background-color: var(--laranja-primaria);
     border-radius: 0.8rem;
     font-size: 1.6rem;
     font-weight: 700;
     border: none;
+    margin: 1rem 1rem 1rem 0;
+    text-decoration: none;
+    color: #000000;
 }
 
-.section1-btn-start:hover{
+.section1-btn:hover{
     background-color: var(--laranja-hover);
     transition: all 0.5s;
+    color: #000000;
 }
 
 .section2 {
