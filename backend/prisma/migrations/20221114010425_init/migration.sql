@@ -62,6 +62,9 @@ CREATE TABLE "usersoncontents" (
 -- CreateIndex
 CREATE UNIQUE INDEX "users_email_key" ON "users"("email");
 
+-- CreateIndex
+CREATE UNIQUE INDEX "trails_name_key" ON "trails"("name");
+
 -- AddForeignKey
 ALTER TABLE "contents" ADD CONSTRAINT "contents_trailId_fkey" FOREIGN KEY ("trailId") REFERENCES "trails"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 

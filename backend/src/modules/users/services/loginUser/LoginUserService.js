@@ -30,10 +30,10 @@ class loginUserService {
         }
 
         //VERIFICA SE O USUÁRIO JÁ EXISTE NO BANCO DE DADOS
-        const userAlreadyExists = await this.userRepository.findByEmail(newEmail)
+        const userAlreadyExists = await this.userRepository.findByEmailLogin(newEmail)
 
         if(!userAlreadyExists) {
-            throw new ErrorApp('Missing email or password')
+            throw new ErrorApp('Password or e-mail are incorrect.')
         }
 
         const userLogged = _.clone(userAlreadyExists, true)

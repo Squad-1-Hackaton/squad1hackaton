@@ -10,7 +10,7 @@ class UserRepository {
 
         const passwordHash = bcrypt.hashSync(password, saltRounds)
         if (!passwordHash) {
-            throw new ErrorApp('Problem server', 500)
+            throw new ErrorApp('User creation problem', 500, '#0002')
         }
         
         const newUser = new User(email, passwordHash, name)
@@ -20,7 +20,7 @@ class UserRepository {
                 data: newUser
             })
         } catch (error) {
-            throw new ErrorApp('Creation failure (db)', 500)
+            throw new ErrorApp('User creation problem', 500, '#0003')
         }
     }
 
@@ -33,9 +33,21 @@ class UserRepository {
             })
             return userFound
         } catch (error) {
-            throw new ErrorApp('Search failed (db)', 500)
+            throw new ErrorApp('User creation problem', 500, '#0001')
         }
+    }
 
+    async findByEmailLogin(email) {
+        try {
+            const userFound = await prisma.users.findUnique({
+                where: {
+                    email,
+                },
+            })
+            return userFound
+        } catch (error) {
+            throw new ErrorApp('Problem logging into the application', 500, '#0004')
+        }
     }
 
     async loginUser(password, passwordHash){

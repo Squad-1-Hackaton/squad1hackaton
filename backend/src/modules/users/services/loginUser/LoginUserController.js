@@ -10,7 +10,7 @@ class loginUserController {
             return response.status(200).json({message: 'Usuário autenticado com sucesso', user, token})
 
         } catch (err) {
-            return response.status(err.statusCode).json({message: err.message})
+            return response.status(err.statusCode).json(err)
         }      
     }
 }
