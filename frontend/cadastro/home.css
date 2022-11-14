@@ -74,9 +74,9 @@ a.nav-link{
     padding: 30px 0;
 }
 
-.sub-section1{
+/* .sub-section1{
     padding-bottom: 40px;
-}
+} */
 
 .titulo-inicial{
     font-weight: 700;
@@ -176,6 +176,21 @@ a.nav-link{
     text-align: center;
     color: var(--laranja-primaria);
     padding-bottom: 25px;
+}
+
+.section4-btn{
+    width: 32rem;
+    height: 3.5rem;
+    background-color: var(--laranja-primaria);
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: none;
+}
+
+.section4-btn:hover{
+    background-color: var(--laranja-hover);
+    transition: all 0.5s;
 }
 
 
@@ -293,9 +308,21 @@ input#confirmar-senha.form-control{
     width: 90%;
 }
 
-.section6-btn {
-    width: 15rem;
-} 
+.section6-btn{
+    width: 30.4rem;
+    height: 4.8rem;
+    background-color: var(--laranja-primaria);
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: none;
+    margin: 1rem 1rem 1rem 0;
+}
+
+.section6-btn:hover{
+    background-color: var(--laranja-hover);
+    transition: all 0.5s;
+}
 
 footer {
     display: flex;
@@ -394,6 +421,8 @@ footer {
     .section5-title {
         font-size: 3rem!important;
         text-align: center;
+        padding-left: 0.5rem!important;
+        padding-right: 0.5rem!important;
     }
 
     .section5-img {
@@ -435,12 +464,22 @@ footer {
 
     .section6 {
         text-align: center;
-        margin-left: 0;;
+        /* margin-left: 0.3rem;
+        margin-right: 0.3rem; */
+    }
+
+    .section6-title {
+
     }
 
     .section6-div-body-txt {
-        /* margin-left: 0!important;
-        margin-right: 0; */
+        margin-left: 0.3rem!important;
+        margin-right: 0.3rem!important;
+    }
+
+    .section6-btn {
+        width: 14rem;
+        font-size: 1.4rem;
     }
 
 }
