@@ -165,9 +165,7 @@ a.nav-link{
     padding: 50px 0;
 }
 
-
-
-.section4 h3{
+.section4-title{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -178,14 +176,21 @@ a.nav-link{
     padding-bottom: 25px;
 }
 
+.form-title {
+    margin-top: 2rem;
+}
+
 .section4-btn{
-    width: 32rem;
-    height: 3.5rem;
+    height: 4.2rem;
     background-color: var(--laranja-primaria);
     border-radius: 0.8rem;
     font-size: 1.6rem;
     font-weight: 700;
     border: none;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .section4-btn:hover{
@@ -329,8 +334,11 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 3.8rem;
     color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 @media (min-width: 1000px) {
@@ -418,6 +426,10 @@ footer {
         padding-right: 0
     }
 
+    .section4-btn {
+        font-size: 1.6rem;
+    }
+
     .section5-title {
         font-size: 3rem!important;
         text-align: center;
@@ -432,6 +444,12 @@ footer {
 
     .section6{
         text-align: center;
+    }
+
+    .section6-btn {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 20rem;
     }
 }
 
@@ -460,6 +478,11 @@ footer {
 
     .section3-icons {
         width: 10rem;
+    }
+
+    .form-control {
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
     }
 
     .section6 {
