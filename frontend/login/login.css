@@ -9,6 +9,7 @@
 
 html {
     height: 100%;
+    background-color: #FFFBF6;
 }
 
 body{
@@ -20,24 +21,25 @@ body{
 /* nav-header {
     background-color: #001024;
 }
-
 .navbar-nav {
     background-color: #001024;
     color: #FFFBF6;
 } */
 
+
 .navbar-nav {
     font-weight: 700;
 }
 
-header {
-    height: 10%;
-}
+
+/* #header .navbar-collapse{
+    width: auto;
+} */
+
 /* 
 #header .navbar-collapse{
     width: auto;
 }
-
 @media (max-width: 991.98) {
     #header .navbar-collapse,
     .container-fluid{
@@ -66,7 +68,7 @@ header {
 
 .btn-nav1:hover {
     transition: 300ms;
-    color: #e5e5e5;
+    background-color: #CC601C;
 }
 
 .btn-nav2 {
@@ -83,7 +85,7 @@ header {
 
 .btn-nav2:hover {
     transition: 300ms;
-    color: #e5e5e5;
+    background-color: #009A7D;
 }
 
 main {
@@ -92,7 +94,8 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #FFFBF6;
-    height: 80%;
+    height: 94.25%;
+    
 }
 
 .form {
@@ -101,29 +104,37 @@ main {
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
-    height: 25rem;
-    width: 25rem;
+    height: 24rem;
     border-radius: 2rem;
     text-align: center;
     -webkit-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.52); 
     box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.52);
 }
 
+
 .form-title {
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
 }
 
 .div-inside-form {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
+    justify-content: center;
     align-items: center;
     background-color: white;
-    height: 80%;
-    width: 70%;
+    height: 20rem;
+    width: 60%;
     border-radius: 20rem;
     font-size: 1rem;
+}
+
+
+.form-control{
+    /*padding: 0.6rem!important;*/
+    margin: 0.25rem;
 }
 
 .div-forgot-signup {
@@ -142,13 +153,15 @@ main {
 
 .anchor-forgot-password {
     text-decoration: none;
-    padding-top: 0.13rem;
+    padding-top: 0.26rem;
     margin-left: 0.3rem;
+    font-size: 0.875rem;
 }
 
-.text-forgot {
+.form-text {
     margin-bottom: 0;
 }
+
 
 .div-signup {
     display: flex;
@@ -159,8 +172,9 @@ main {
 
 .signup {
     text-decoration: none;
-    padding-top: 0.13rem;
     margin-left: 0.3rem;
+    font-size: 0.875rem;
+    padding-top: 0.26rem;
 }
 
 .btn-form {
@@ -169,14 +183,57 @@ main {
     height: 2.375rem;
     border: none;
     border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 10%;
-    color: white;
-    font-size: 0.75rem;
+.btn-form:hover {
+    background-color: #CC601C;
+}
+
+
+@media (max-width: 430px) {
+.form-title{
+    font-size: 1rem;
+}
+
+    .div-anchor-forgot-password{
+        flex-direction: column;
+        font-size: .8rem;
+    }
+    .div-signup{
+        flex-direction: column;
+        font-size: .8rem;
+    }
+        
+}
+
+
+@media (max-width: 320px) {
+    .form-title{
+        font-size: 1rem;
+    }
+    
+    .text-forgot{
+        font-size: .8rem;
+    }
+
+    .anchor-forgot-password{
+        font-size: .8rem; 
+    }
+
+    .div-signup{
+        flex-direction: column;
+        font-size: .8rem;
+    }
+
+    .signup{
+        font-size: .8rem;
+    }
+
+    .btn-form{
+        margin: 0.3rem;
+    }
+            
 }
