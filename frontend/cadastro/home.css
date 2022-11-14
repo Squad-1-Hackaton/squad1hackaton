@@ -33,22 +33,24 @@ a.nav-link{
     font-size: 1.6rem;
 }
 
-.btn-nav1{
-    width: 12rem;
-    height: 3.8rem;
-    background-color: var(--laranja-primaria)!important;
+.section1-btn{
+    width: 20rem;
+    height: 4.8rem;
+    background-color: var(--laranja-primaria);
     border-radius: 0.8rem;
     font-size: 1.6rem;
     font-weight: 700;
     border: none;
-    color: #000000!important;
-    margin: 0.7rem;
-    text-align: center;
+    margin: 1rem 1rem 1rem 0;
+    text-decoration: none;
+    color: #000000;
 }
 
-.btn-nav1:hover{
-    background-color: var(--laranja-hover)!important;
+.section1-btn:hover{
+    background-color: var(--laranja-hover);
     transition: all 0.5s;
+    color: #000000;
+}
 }
 
 .btn-nav2{
@@ -182,6 +184,7 @@ a.nav-link{
 
 .section4-btn{
     height: 4.2rem;
+    width: 100%;
     background-color: var(--laranja-primaria);
     border-radius: 0.8rem;
     font-size: 1.6rem;
@@ -191,11 +194,14 @@ a.nav-link{
     margin-top: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    text-decoration: none;
+    color: #000000;
 }
 
 .section4-btn:hover{
     background-color: var(--laranja-hover);
     transition: all 0.5s;
+    color: #000000;
 }
 
 
@@ -237,11 +243,7 @@ input#nome.form-control{
 input#email.form-control{
     font-size: 1.4rem;
     height: 11%;
-
     border-radius: 1rem;
-
-
-    
 }
 
 input#password.form-control{
@@ -310,7 +312,7 @@ input#confirmar-senha.form-control{
 .section6 p{
     font-weight: 400;
     font-size: 1.7rem;
-    width: 90%;
+    width: 100%;
 }
 
 .section6-btn{
@@ -322,11 +324,14 @@ input#confirmar-senha.form-control{
     font-weight: 700;
     border: none;
     margin: 1rem 1rem 1rem 0;
+    text-decoration: none;
+    color: #000000;
 }
 
 .section6-btn:hover{
     background-color: var(--laranja-hover);
     transition: all 0.5s;
+    color: #000000;
 }
 
 footer {
