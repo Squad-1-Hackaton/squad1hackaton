@@ -55,7 +55,7 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="https://digital.fcamara.com.br/orangejuice#rd-section-kw3vk5md"
+                href="https://digital.fcamara.com.br/orangejuice"
                 >Sobre a Orange</a
               >
             </li>
@@ -66,10 +66,10 @@
               <a class="nav-link" href="#canais">Canais</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#cadastro">Cadastre-se</a>
+              <a class="nav-link btn btn-nav1" href="#form">Cadastre-se</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../login/login.html">Entrar</a>
+              <a class="nav-link btn btn-nav2" href="../login/login.html">Entrar</a>
             </li>
           </ul>
         </div>
@@ -81,9 +81,9 @@
 <main>
     <!-- SECTION 1 -->
   <div class="container-fluid section1">
-    <div class="row">
+    <div class="row col-10 m-auto">
       <div class="col-md-1 col-lg-1"></div>
-        <div class="col-md-12 col-lg-6">
+        <div class="col-md-12 col-lg-6 d-flex align-items-center">
           <div class="sub-section1">
             <h1 class="titulo-inicial">Evolua a sua carreira na tecnologia!</h1>
             <p class="subtitulo">
@@ -91,7 +91,8 @@
               vidas através de trilhas gratuitas em Desenvolvimento, UX/UI Design
               e QA!
             </p>
-            <a href="#cadastro"><button class="section1-btn-cadastro">Quero começar!</button></a>  
+            <!-- <a href="#form" class="section1-btn-start" role="button">Quero começar!</a> -->
+            <a href="#form"><button class="section1-btn-start">Quero começar!</button></a>
           </div>
         </div>
       <div class="col-md-12 col-lg-4">
@@ -140,11 +141,11 @@
 
 
   <!--d-flex flex-column align-items-center-->
-  <!-- SECTION 3 -->
+
     <!-- SECTION 3 -->
-    <div class="container-fluid d-flex flex-column align-items-center section3">
+    <div class="container-fluid d-flex flex-column align-items-center justify-content-center section3">
       <div class="container-fluid col-10 m-auto">
-        <div class="row">
+        <div class="row d-flex flex-row justify-content-center align-items-center">
           <h2>QUAIS TRILHAS POSSO FAZER?</h2>
 
           <div class="col"> 
@@ -166,8 +167,8 @@
     
 
   <!-- SECTION 4 - FORMULÁRIO-->
-  <div class="container-fluid d-flex flex-column align-items-center section4">
-    <h3>VAMOS EMBARCAR JUNTOS NESSA JORNADA?</h3>
+  <div class="container-fluid d-flex flex-column align-items-center section4" id="form">
+    <h3 class="section4-title">VAMOS EMBARCAR JUNTOS NESSA JORNADA?</h3>
     <form action="" method="post" class="form">
       <div class="div-inside-form">
         <h4 class="form-title">Acesse sua Conta no Orange Evolution</h3>
@@ -205,24 +206,18 @@
             placeholder="Confirmar senha"
             required
           />
-        <button
-          type="button"
-          class="btn-form"
-          data-toggle="modal"
-          data-target="#exampleModalCenter"
-        >Acessar trilhas gratuitamente!
-        </button>
+          <a href="#" class="section4-btn d-flex justify-content-center align-items-center" role="button">Acessar trilhas</a>
       </div>
     </form>
   </div>
 
 
   <!-- SECTION 5 -->
-  <div class="container-fluid d-flex flex-column align-items-center section5">
+  <div class="container-fluid d-flex flex-column align-items-center section5" id="parcerias">
     <div class="container-fluid col-10 m-auto">
       
       <div class="row">
-        <h2>QUEM APOIA</h2>
+        <h2 class="section5-title">QUEM APOIA</h2>
       </div>
 
       <div class="row section5-group-imgs">
@@ -248,10 +243,10 @@
 
 
     <!-- SECTION 6 -->
-    <div class="container-fluid d-flex flex-column align-items-center section6">
-      <div class="container-fluid col-10 m-auto">
+    <div class="container-fluid d-flex flex-column align-items-center section6" id="canais">
+      <div class="container-fluid col-10">
         <div class="row">
-          <div class="col m-5">
+          <div class="col m-5 section6-div-body-txt">
             <h2 class="card-title section6-title">Nós temos uma missão...</h1>
             <h3>
               Conectar pessoas com os mesmos interesses enquanto você aprende
@@ -265,36 +260,14 @@
               Aqui a troca de conhecimento é constante,
               <strong>vem fazer esse suco de laranja com a gente!</strong>
             </p>
-            <a class="btn btn-secondary section6-btn" href="#cadastro"
-              >Quero começar!</a
-            >
           </div>
           
           <div class="container-fluid col m-5 d-flex flex-column justify-content-center align-items-center">
-            
-              <button class="btn btn-secondary section6-btn">
-                <b>Acesse o Discord</b>
-              </button>
-
-            
-              <button class="btn btn-secondary section6-btn">
-                <b>Acesse o Medium</b>
-              </button>
-
-            
-              <button class="btn btn-secondary section6-btn">
-                <b>Acesse o YouTube</b>
-              </button>
-
-            
-              <button class="btn btn-secondary section6-btn">
-                <b>Acesse o Twitch</b>
-              </button>
-
-            
-              <button class="btn btn-secondary section6-btn">
-                <b>Acesse o Spotify</b>
-              </button>
+              <a href="https://discord.com/invite/NtESsDFGx5" class="section6-btn d-flex justify-content-center align-items-center" role="button">Acesse o Discord</a>
+              <a href="https://medium.com/orangejuicefc" class="section6-btn d-flex justify-content-center align-items-center" role="button">Acesse o Medium</a>
+              <a href="https://www.youtube.com/orangejuicefc" class="section6-btn d-flex justify-content-center align-items-center" role="button">Acesse o YouTube</a>
+              <a href="https://www.twitch.tv/orangejuice_tech" class="section6-btn d-flex justify-content-center align-items-center" role="button">Acesse o Twitch</a>
+              <a href="https://open.spotify.com/show/5zy6DpF8V3N8rBbWO7OE79" class="section6-btn d-flex justify-content-center align-items-center" role="button">Acesse o Spotify</a>
           </div>
         </div>
       </div>
@@ -303,7 +276,7 @@
 
   
   <!--FOOTER-->
-  <footer class="footer d-flex justify-content-center bg-dark">Orange Evolution © All Rights Reserved - Squad 1™</footer>
+  <footer class="footer d-flex justify-content-center bg-dark">© 2022 FCamara Formação e Consultoria. Todos os direitos reservados.</footer>
   
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
