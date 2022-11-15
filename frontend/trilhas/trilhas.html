@@ -11,162 +11,188 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+
+    <!--NO CACHE-->
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!--Script requisição-->
+    <script src="../scripts/authenticatedUser.js"></script>
+    <script src="../scripts/trails.js"></script>
   </head>
 
   <body>
-    <header class="header">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navigation-bar">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNavAltMarkup"
-        >
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark navigation-bar">
+        <div class="container-fluid col-10">
           <img
             class="logo-orange-juice-small"
             src="../assets/logo-orange-juice-small.png"
             alt=""
           />
-          <div class="navbar-nav navbar-div-menu">
-            <button class="btn btn-light loged-navbar-btn">
-              <b>Conecte-se com a nossa comunidade!</b>
-            </button>
-            <!-- <a class="nav-item nav-link navbar-div-menu-anchor active" href="../trilhas/trilhas.html">Trilhas</a> -->
-            <a
-              class="nav-item nav-link navbar-logout"
-              href="../cadastro/cadastro.html"
-              >Sair</a
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse d-lg-flex justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul
+              class="navbar-nav ml-auto mb-lg-0 d-flex align-items-center justify-content-center"
             >
+              <li class="nav-item">
+                <button class="loged-navbar-btn">
+                  <b>Conecte-se com a nossa comunidade!</b>
+                </button>
+              </li>
+              <li class="nav-item">
+                <!-- <a
+                  class="nav-link navbar-logout"
+                  href="../cadastro/cadastro.html"
+                >
+                  Sair
+                </a> -->
+                <button 
+                  class="nav-link navbar-logout"
+                  onclick="logoff()"
+                >
+                  Sair
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="section1">
-        <div class="col-sm-6 section1-div">
-          <div class="card border-0 section1-div">
-            <div class="card-body div-card-body">
-              <h1 class="card-title">Olá, Douglas!</h1>
+      <!-- SECTION 1 -->
+      <div class="container-fluid section1">
+        <div class="container-fluid col-10">
+          <div class="row">
+            <div class="col-md-1 col-lg-1"></div>
+            <div class="col-md-12 col-lg-6">
+              <div class="sub-section1">
+                <h1 class="titulo-inicial capitalize">Olá, Douglas!</h1>
+                <p class="subtitulo">
+                  Embarque nessa jornada tech com a gente!
+                  <br />Escolha sua trilha e vamos lá!
+                </p>
+                <p class="subtitulo"> <strong>O que vamos aprender hoje?</strong></p>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-4">
+              <img
+                src="../assets/logo-orange-trilhas.png"
+                class="img-res rounded mx-auto d-block"
+                alt=""
+              />
+            </div>
+            <div class="col-md-1 col-lg-1"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2 -->
+      <div class="container-fluid section2">
+        <div class="container-fluid col-8">
+          <div class="row row-cols-1 row-cols-md-3 g-4" id="trilhascontent">
+
+            <!-- <div class="col p-5">
+              <div class="card h-100">
+                <img
+                  src="../assets/Trilha1.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">UX/UI Design</h5>
+                  <p class="card-text">
+                    Um trilha de conhecimento feita para você que quer evoluir
+                    seus conhecimentos em UX/UI design!
+                  </p>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <button class="btn btn-dark">BTN HERE</button>
+                </div>
+              </div>
+            </div>
+            <div class="col p-5">
+              <div class="card h-100">
+                <img
+                  src="../assets/Trilha2.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Desenvolvimento Full-Stack</h5>
+                  <p class="card-text">
+                    Impulsione sua evolução na área tech com a nossa trilha de
+                    desenvolvimento Full Stack!
+                  </p>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <button class="btn btn-dark">BTN HERE</button>
+                </div>
+              </div>
+            </div>
+            <div class="col p-5">
+              <div class="card h-100">
+                <img
+                  src="../assets/Trilha3.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Quality Assurance (QA)</h5>
+                  <p class="card-text">
+                    Aprenda a garantir a qualidade do desenvolvimento das
+                    soluções na área tech com a trilha de QA!
+                  </p>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <button class="btn btn-dark">BTN HERE</button>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="container-fluid d-flex flex-column align-items-center section3"
+      >
+        <div class="container-fluid col-10 m-auto">
+          <div class="row">
+            <h2>Em breve mais trilhas!</h2>
+            <h3>
+              Enquanto isso... Confira nosso conteúdo vitaminado e de qualidade
+              em outros locais!
+            </h6>
+
+            <div class="col section3-divs">
+              <h4>ORANGE JUICE CAST</h4>
               <p>
-                Embarque nessa jornada tech com a gente!
-                <br />Escolha sua trilha e vamos lá!
+                No nosso podcast vitaminado, o host Joel Backschat, CTO do Grupo
+                FCamara, traz convidados mais que especiais para compartilhar
+                suas experiências e trajetórias no mercado.
               </p>
-              <p><b>O que vamos aprender hoje?</b></p>
-            </div>
-          </div>
-        </div>
-
-        <div id="section1-div-img">
-          <img
-            src="../assets/logo-orange-evolution.png"
-            class="section1-logo-orange-evolution"
-          />
-        </div>
-      </section>
-
-      <section class="section2">
-        <div class="section2-div-title">
-          <h1>TRILHAS DE CONHECIMENTO</h1>
-        </div>
-
-        <div class="row section2-div">
-          <div class="col m-2 section2-div-card">
-            <div class="card">
-              <img src="../assets/1.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  qualquerte xtinho qualquert tinho qualquer
-                </p>
-              </div>
-              <div class="progress">
-                <div
-                  class="progress-bar section2-bar1-progress"
-                  role="progressbar"
-                  aria-label="Basic example"
-                  aria-valuenow="0"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
-              </div>
-              <a href="#" class="btn btn-secondary">Iniciar trilha</a>
-            </div>
-          </div>
-
-          <div class="col m-2 section2-div-card">
-            <div class="card">
-              <img src="../assets/2.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">ksda asdkç laskd~l kasdklas qualquer</p>
-              </div>
-              <div class="progress">
-                <div
-                  class="progress-bar section2-bar2-progress"
-                  role="progressbar"
-                  aria-label="Basic example"
-                  aria-valuenow="75"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
-              </div>
-              <a href="#" class="btn btn-secondary">Continuar trilha</a>
-            </div>
-          </div>
-
-          <div class="col m-2 section2-div-card">
-            <div class="card">
-              <img src="../assets/3.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  asda a da sdasdinho qualquer textinho qualquer
-                </p>
-              </div>
-              <div class="progress">
-                <div
-                  class="progress-bar section2-bar3-progress"
-                  role="progressbar"
-                  aria-label="Basic example"
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
-              </div>
-              <a href="#" class="btn btn-secondary">Trilha concluída</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- pensar em substituir os textinhos da section 3 por cards de texto do bootstrap (responsividade) -->
-
-      <section class="section3">
-        <div class="section3-div-title">
-          <h1>Em breve mais trilhas!</h1>
-          <h6>
-            Enquanto isso... Confira nosso conteúdo vitaminado e de qualidade em
-            outros locais!
-          </h6>
-        </div>
-        <div class="section3-div-container">
-          <div class="section3-divs">
-            <h2>esse é o título</h2>
-            <p>
-              esse é o textinho que eu tenho que escrever que tem mais ou menis
-              umas 4 ou 5 linhas
-            </p>
-            <div>
               <img
                 class="section3-icons"
                 src="../assets/logo-orange-evolution.png"
@@ -193,41 +219,110 @@
                 alt=""
               />
             </div>
-          </div>
-          <div class="section3-divs">
-            <h2>esse é o título</h2>
-            <p>
-              esse é o textinho que eu tenho que escrever que tem mais ou menis
-              umas 4 ou 5 linhas
-            </p>
-            <button class="btn btn-secondary section3-btn">
-              <b>Acesse o Twitch</b>
-            </button>
-          </div>
-          <div class="section3-divs">
-            <h2>esse é o título</h2>
-            <p>
-              esse é o textinho que eu tenho que escrever que tem mais ou menis
-              umas 4 ou 5 linhas
-            </p>
-            <button class="btn btn-secondary section3-btn">
-              <b>Acesse o YouTube</b>
-            </button>
-          </div>
-          <div class="section3-divs">
-            <h2>esse é o título</h2>
-            <p>
-              esse é o textinho que eu tenho que escrever que tem mais ou menis
-              umas 4 ou 5 linhas
-            </p>
-            <button class="btn btn-secondary section3-btn">
-              <b>Acesse o Medium</b>
-            </button>
+
+            <div class="col section3-divs">
+              <h4>ORANGE TALKS</h4>
+              <p>
+                Nossas lives na Twitch são feitas para te mostrar novos caminhos
+                a seguir nessa jornada da programação, UX, Scrum, comunicação e
+                vários outros assuntos relevantes do mundo da tecnologia.
+              </p>
+              <button class="btn btn-secondary section3-btn">
+                <b>Acesse o Twitch</b>
+              </button>
+            </div>
+
+            <div class="col section3-divs">
+              <h4>CANAL ORANGE</h4>
+              <p>
+                Perdeu uma talk ou live? Ou quer ver o Orange Juice Cast em
+                vídeo? Não tem problema! Em nosso canal no Youtube,
+                disponibilizamos todos os conteúdos ao vivo e muito mais!
+              </p>
+              <button class="btn btn-secondary section3-btn">
+                <b>Acesse o YouTube</b>
+              </button>
+            </div>
+
+            <div class="col section3-divs">
+              <h4>ORANGE MEDIUM</h4>
+              <p>
+                O Blog da Orange está repleto de conteúdos tech feitos para
+                você! Nossos artigos vitaminados vão ajudar você nessa jornada
+                através de diversos temas. Você não vai perder, né?
+              </p>
+              <button class="btn btn-secondary section3-btn">
+                <b>Acesse o Medium</b>
+              </button>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section class="section4">
+
+
+
+
+
+      <!-- SECTION 4 -->
+
+      <div class="container-fluid section4">
+        <div class="row">
+          <div class="col-md-2 col-lg-2"></div>
+            <div class="col-md-4">
+              <img src="../assets/logo-orange.png" class="img-res rounded mx-auto d-block" alt=""/>
+            </div>
+
+          <div class="col-md-4">
+            <div class="redes-sociais">      
+              <div class="section4-div-card">
+                <h2>Ufa! Bastante coisa, hein?</h2>
+                <p>Para garantir que não vai perder nenhuma novidade nossa, nos siga
+                  em nossas redes sociais:</p>
+              </div>
+              
+              <img
+                class="section4-icons"
+                src="../assets/instagram.png"
+                alt=""
+              />
+
+              <img
+                class="section4-icons"
+                src="../assets/facebook.png"
+                alt=""
+              />
+              <img
+                class="section4-icons"
+                src="../assets/linkedin.png"
+                alt=""
+              />
+              <img
+                class="section4-icons"
+                src="../assets/twitter.png"
+                alt=""
+              />
+              <img
+                class="section4-icons"
+                src="../assets/tiktok.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-md-2 col-lg-2"></div>
+        </div> 
+      </div>     
+
+
+
+
+
+
+
+
+      <!-- </section> 
+
+      <div class="section4">
         <div class="section4-div">
           <div>
             <img class="logo-orange" src="../assets/logo-orange.png" alt="" />
@@ -267,7 +362,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+    -->
     </main>
 
     <footer class="footer d-flex justify-content-center bg-dark">

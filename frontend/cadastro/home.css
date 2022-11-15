@@ -9,144 +9,184 @@
     --laranja-primaria: #FF7823;
     --laranja-hover: #CC601C;
     --laranja-clicked: #803C11; 
-    --marrom-cinza: #170600;
-    --full-branco: #FFFFFF;
+
+    --marrom-cinza-botoes: #170600;
+
+    --fundo-azul-sections: #001024;
+    --fundo-branco-section: #E5E5E5;
+
+    --verde-agua: #00C19C;
+    --verde-hover: #009A7D;
+
+    --preto-base: #000000;
+    --branco-base: #FFFFFF;
 
     font-size: 62.5%; /* 1rem = 10px */
-
 }
 
 html, body {
     scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
     
 }
 
-#header {
+/*========================= HEADER ==========================*/
+
+header {
     width: 100%;
-}
-
-/*#header .navbar-collapse{
-    width: auto;
-}*/
-
-a.nav-link{
+    font-weight: 700;
     font-size: 1.6rem;
 }
 
+/* BOTÃO CADASTRE-SE */
+.btn-nav1{
+    background-color: var(--laranja-primaria)!important;
+    color: var(--marrom-cinza-botoes)!important;
+    width: 12rem;
+    height: 3.8rem;  
+    border-radius: 0.8rem;
+    border: none;
+    margin: 0.7rem;
+    text-align: center;
+}
+
+.btn-nav1:hover{
+    background-color: var(--laranja-hover)!important;
+    transition: all 0.5s;
+}
+
+/* BOTÃO ENTRAR */
+.btn-nav2{
+    background-color: var(--verde-agua)!important;
+    color: var(--marrom-cinza-botoes)!important;
+    width: 8rem;
+    height: 3.8rem;
+    border-radius: 0.8rem;
+    border: none;  
+}
+
+.btn-nav2:hover{
+    background-color: var(--verde-hover)!important;
+    transition: all 0.5s;
+}
+
+
+/*========================= SECTION 1 ==========================*/
+
 .section1{
     width: 100%;
-    height: auto;
-    background-color: #001024;
-    padding: 30px 0;
+    /*height: auto;*/
+    background-color: var(--fundo-azul-sections);
+    padding: 3rem 0;
 }
 
 .titulo-inicial{
-    font-weight: 700;
     font-size: 4rem;
-    color:#FFFFFF;
+    font-weight: 700;
+    color: var(--branco-base);
+    padding-bottom: 2rem;
 }
 
 .subtitulo{
     font-size: 2rem;
-    color: #FFFFFF;
+    color: var(--branco-base);
+    padding-bottom: 1rem;
 }
 
-.section1-btn-cadastro{
-    width: 16.9rem;
-    height: 3.8rem;
+.section1-btn-start {
     background-color: var(--laranja-primaria);
-    border-radius: 8px;
     font-size: 1.6rem;
     font-weight: 700;
+    width: 20rem;
+    height: 4.8rem;
+    border-radius: 0.8rem;
     border: none;
+    text-decoration: none;
+    color: var(--marrom-cinza-botoes)
 }
 
-.section1-btn-cadastro:hover{
+.section1-btn-start:hover{
     background-color: var(--laranja-hover);
     transition: all 0.5s;
 }
 
+/*========================= SECTION 2 ==========================*/
+
 .section2 {
     width: 100%;
-    height: auto;
-    background-color: #E5E5E5;
+    /*height: auto;*/
+    background-color: var(--fundo-branco-section);
     text-align: center;
-    padding: 30px 0;
+    padding: 5rem 0;
 }
 
 .section2 h2 {
-    font-weight: 700;
     font-size: 4rem;
+    font-weight: 700;
     color: var(--laranja-hover);
+    padding-bottom: 5rem;
 }
 
 .section2 h3 {
     font-weight: 700;
     font-size: 2.8rem;
     color: var( --marrom-cinza);
+    padding-bottom: 5rem;
 }
 
 .texto-icons{
     font-weight: 700;
     font-size: 2rem;
-    color:#000000;
+    color:var(--preto-base);
+    padding: 2rem;
 }
 
 
+/*========================= SECTION 3 ==========================*/
+
 .section3 {
     width: 100%;
-    height: auto;
+    /*height: auto;*/
     text-align: center;
-    background-color: #001024;
+    background-color: var(--fundo-azul-sections);
     align-items: center;
-    padding: 50px 0;
+    padding: 5rem 0;
 }
 
 .section3 h2{
     font-weight: 700;
     font-size: 4rem;
-    color: var(--full-branco);
-    padding-bottom: 80px;
-}
-
-.section3 .col{
-    padding-bottom: 30px;
+    color: var(--branco-base);
+    padding-bottom: 8rem;
+    text-transform: uppercase;
 }
 
 .texto-trilhas{
     font-weight: 700;
     font-size: 2rem;
-    color: var(--full-branco);
-    padding-top: 15px;
+    color: var(--branco-base);
+    padding-top: 2rem;
 }
+
+/*========================= SECTION 4 (FORMULARIO) ==========================*/
 
 .section4{
     width: 100%;
     height: auto;
-    background-color: #E5E5E5;
-    padding: 50px 0;
+    background-color: var(--fundo-branco-section);
+    padding: 8rem 0;
 }
 
-
-
-.section4 h3{
-    font-family: 'Montserrat';
-    font-style: normal;
+.section4-title{
     font-weight: 700;
     font-size: 3.2rem;
-    line-height: 45px;
     text-align: center;
     color: var(--laranja-primaria);
-    padding-bottom: 25px;
+    padding-bottom: 3rem;
+    text-transform: uppercase;
 }
-
-
-.form-title {
-    font-weight: 700;
-    font-size: 2rem;
-}
-
 
 .form {
     display: flex;
@@ -154,12 +194,15 @@ a.nav-link{
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
-    /*height: 35rem;
-    width: 35rem;*/
     border-radius: 2rem;
     text-align: center;    
 }
 
+.form-title {
+    margin-top: 2rem;
+    font-weight: 700;
+    font-size: 2rem;
+}
 
 .div-inside-form {
     display: flex;
@@ -182,11 +225,7 @@ input#nome.form-control{
 input#email.form-control{
     font-size: 1.4rem;
     height: 11%;
-
     border-radius: 1rem;
-
-
-    
 }
 
 input#password.form-control{
@@ -198,50 +237,45 @@ input#password.form-control{
 input#confirmar-senha.form-control{
     font-size: 1.4rem;
     height: 11%;
-
     border-radius: 1rem;
 }
 
-.form-control{
+.section4-btn{
+    height: 4.2rem;
+    width: 100%;
+    background-color: var(--laranja-primaria);
+    border-radius: 0.8rem;
     font-size: 1.6rem;
+    font-weight: 700;
+    border: none;
+    margin: 2rem 2rem;
+    /*padding-left: 2rem;*/
+    text-decoration: none;
+    color: var(--marrom-cinza-botoes);
+}
+
+.section4-btn:hover {
+    background-color: var(--laranja-hover);
+    transition: all 0.5s;
+    color: var(--marrom-cinza-botoes);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*========================= SECTION 5 ==========================*/
 
 .section5 {
     width: 100%;
-    height: auto;
+    /*height: auto;*/
     text-align: center;
-    background-color: #001024;
+    background-color: var(--fundo-azul-sections);
     padding: 50px;
 }
 
 .section5 h2{
     font-weight: 700;
     font-size: 3.6rem;
-    color: var(--full-branco);
-    padding: 10px 50px;
+    color: var(--branco-base);
+    padding: 2rem 0rem;
 }
 
 .section5-group-imgs{
@@ -249,71 +283,83 @@ input#confirmar-senha.form-control{
     align-items: center;
 }
 
-.section5-img{
-    padding: 15px 0px;
-}
-
+/*========================= SECTION 6 ==========================*/
 
 .section6 {
-    height: auto;
-    background-color: white;
+    /*height: auto;*/
+    background-color: var(--fundo-branco-section);
     width: 100%;
     align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.section6-div-body-txt{
+    margin-top: 5rem!important;
 }
 
 .section6 h2{
     font-weight: 700;
     font-size: 3.2rem;
     color: var(--marrom-cinza);
-    line-height: 4.5rem;
+    
 }
 
 .section6 h3{
     font-weight: 700;
-    font-size: 2rem;
-    line-height: 3.4rem;
+    font-size: 2.4rem;
     color: var(--marrom-cinza);
+    padding: 2rem 0;
 }
 
 .section6 p{
     font-weight: 400;
-    font-size: 1.7rem;
-    width: 90%;
+    font-size: 1.8rem;
+    width: 100%;
+    line-height: 2.5rem;
 }
 
-.section6-btn {
-    width: 15rem;
-} 
+.section6-btn{
+    width: 30.4rem;
+    height: 4.8rem;
+    background-color: var(--laranja-primaria);
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: none;
+    margin: 1rem 1rem 1rem 0;
+    text-decoration: none;
+    color: var(--marrom-cinza-botoes)
+}
+
+.section6-btn:hover{
+    background-color: var(--laranja-hover);
+    transition: all 0.5s;
+    color: var(--marrom-cinza-botoes)
+}
 
 footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 3.8rem;
-    color: white;
+    color: var(--branco-base);
+    padding-left: 0 1rem;
 }
 
 
-/*@media (max-width: 991.98) {
-    #header .navbar-collapse,
-    .container-fluid{
-        width: 100%;
-    }
-    
-}
-*/
+/*========================= MEDIA QUERIES ==========================*/
 
-
-
-@media (min-width: 1000px) {
+@media (min-width: 1200) {
     .sub-section1{
-        width: 67%;
         padding-top: 25px;
     }
 }
 
-@media (min-width: 551px) and (max-width: 991px) {
+
+@media (min-width: 576px) and (max-width: 992px) {
     .section1{
         width: 100%;
         height: auto;
@@ -325,12 +371,12 @@ footer {
 
     .section1 img{
         width: 40%;
-        margin: 20px 0;
-        
+        margin: 20px 0; 
     }
 }
 
-@media (max-width: 550px) {
+
+@media (max-width: 575px) {
     .section1{
         width: 100%;
         height: auto;
@@ -345,14 +391,16 @@ footer {
         margin: 20px 0;
     }
 
+    .titulo-inicial {
+        font-size: 3rem;
+    }
+
     .section2{
         width: 100%;
         height: auto;
         align-items: center;
         text-align: center;
     }
-
-
 
     .section2 h2 {
         font-weight: 700;
@@ -372,8 +420,6 @@ footer {
         font-size: 1.6rem;
     }
     
-    
-
     .section3{
         width: 100%;
         height: auto;
@@ -384,21 +430,70 @@ footer {
 
     .section3 h2{
         font-size: 3rem;
-        padding-bottom: 20px;
+        padding-bottom: 2rem;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0
     }
+
+    .section4-btn {
+        font-size: 1.6rem;
+    }
+
+    .section5-title {
+        font-size: 3rem!important;
+        text-align: center;
+        padding-left: 0.5rem!important;
+        padding-right: 0.5rem!important;
+    }
+
+    .section5-img {
+        width: 8rem;
+        height: auto;
+    }
+
     .section6{
         text-align: center;
     }
 }
 
-@media (max-width: 300px) {
+
+@media (max-width: 330px) {
+
     .section1 img{
         width: 80%;
-        margin: 20px 0;
-        
+        margin: 20px 0;    
+    }
+
+    .section1-btn-start {
+        width: 14rem;
+        font-size: 1.4rem;
+    }
+
+    .section2-icons {
+        width: 10rem;
+    }
+
+    .section2 h2 {
+        font-size: 2rem;
+    }
+
+    .section3-icons {
+        width: 10rem;
+    }
+
+    .form-control {
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .section6 {
+        text-align: center;
+    }
+
+    .section6-btn {
+        width: 20rem;
+        font-size: 1.4rem;
     }
 }
-    
-
-
-    

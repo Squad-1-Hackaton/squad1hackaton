@@ -1,0 +1,86 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  id          Int               @id @default(autoincrement())
+  email       String            @unique
+  password    String
+  name        String 
+  admin       Boolean           @default(false)
+  created_at  DateTime          @default(now())
+  trails      UsersOnTrails[]
+  contents    UsersOnContents[]
+
+
+  @@map("users")
+}
+
+model Trails {
+  id                  Int               @id @default(autoincrement())
+  name                String            @unique
+  contents            Contents[]
+  created_at          DateTime          @default(now())
+  users               UsersOnTrails[]
+  contents_trails     UsersOnContents[]
+
+  @@map("trails")
+}
+
+model Contents {
+  id          Int               @id @default(autoincrement())
+  type        content_type
+  title       String 
+  topic       String?           @default(" ")
+  provider    String?
+  duration    String?
+  reference   String
+  created_at  DateTime          @default(now())
+  trails      Trails            @relation(fields: [trailId], references: [id])
+  trailId     Int
+  users       UsersOnContents[]
+
+  @@map("contents")
+}
+
+model UsersOnTrails {
+  id          Int                @id @default(autoincrement())
+  user        Users             @relation(fields: [userId], references: [id])
+  userId      Int
+  trail       Trails            @relation(fields: [trailId], references: [id])
+  trailId     Int
+  created_at  DateTime          @default(now())
+
+  // @@id([userId, trailId])
+  @@map("usersontrails")
+}
+
+enum content_type {
+  Artigo
+  Video
+  Podcast
+  Curso
+}
+
+model UsersOnContents {
+  id          Int                @id @default(autoincrement())
+  user        Users              @relation(fields: [id_user], references: [id])
+  id_user     Int
+  trail       Trails             @relation(fields: [id_trail], references: [id])
+  id_trail    Int
+  contents    Contents          @relation(fields: [id_content], references: [id])
+  id_content  Int
+  concluded   Boolean           @default(false)
+  updated_at  DateTime          @updatedAt
+
+    // @@id([id_user, id_content, id_trail])
+    @@map("usersoncontents")
+} 

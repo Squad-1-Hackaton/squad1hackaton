@@ -1,18 +1,18 @@
-const express = require('express')
-const PORT = 2000
+require('dotenv').config()
+const express = require("express");
+const PORT = 3000;
+const cors = require('cors')
 
-// ROTAS DA APLICAÇÃO
-const registrationRoute = require('./src/routes/registration.route')
-const loginRoutes = require('./src/routes/login.route')
+router = require('./src/routes')
 
-// FIM DAS ROTAS DA APLICAÇÃO
-const app = express()
+const app = express();
 
-app.use(express.urlencoded({ extended: true }))
+app.use(cors())
 
-app.use('/login', loginRoutes)
-app.use('/registration', registrationRoute)
+app.use(express.urlencoded({ extended: true }));
+
+app.use(router)
 
 app.listen(PORT, function () {
-  console.log(`Server started on port ${PORT}`)
-})
+  console.log(`Server started on port ${PORT}`);
+});
