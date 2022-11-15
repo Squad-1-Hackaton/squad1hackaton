@@ -204,7 +204,7 @@ a.nav-link{
     color: #000000;
 }
 
-.btn-form:hover{
+.section4-btn:hover {
     background-color: var(--laranja-hover);
     transition: all 0.5s;
     color: #000000;
