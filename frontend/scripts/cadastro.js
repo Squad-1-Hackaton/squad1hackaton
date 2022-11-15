@@ -1,14 +1,13 @@
+jQuery(function() { 
+    $('form').on('submit', cadastro)
+})
 
-  
-$.ajax(settings).done(function (response) {
-console.log(response);
-});
 
-function cadastro(e) {
-    e.preventDefault()
+function cadastro(event) {
+    event.preventDefault()
     const email = $('#email').val()
     const password = $('#password').val()
-    const repassword = $('#confirma-senha').val()
+    const repassword = $('#confirmar-senha').val()
     const name = $('#nome').val()
     
     if(!email || !password || !name){
@@ -37,7 +36,6 @@ function cadastroAPI(email, password, name) {
         }
     };
     $.ajax(settings).done(function (response) {
-        console.log(response)
-        // window.location.href("../login/login.html")
-    })
+        window.location.assign("../login/login.html");
+    }).fail($('#cadastroButton').prop("disabled", false))
 }

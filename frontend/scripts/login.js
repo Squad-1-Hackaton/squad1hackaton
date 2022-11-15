@@ -1,5 +1,11 @@
 let user = {}
-function login() {
+
+jQuery(function() { 
+    $('form').on('submit', login)
+})
+
+function login(event) {
+    event.preventDefault()
     const email = $('#email').val()
     const password = $('#password').val()
     
@@ -22,6 +28,8 @@ function loginAPI(email, password) {
         }
       };
     $.ajax(settings).done(function (response) {
-        window.location.replace("../login/login.html");
+        sessionStorage.setItem('token_orange', response.token)
+        sessionStorage.setItem('user_orange', JSON.stringify(response.user))
+        window.location.replace("../trilhas/trilhas.html");
     })
 }
