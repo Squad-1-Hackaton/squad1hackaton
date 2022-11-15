@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="743cdb2e-4beb-46fb-b6e2-f75fb91e060e" name="Changes" comment="" />
+    <list
+      default="true"
+      id="743cdb2e-4beb-46fb-b6e2-f75fb91e060e"
+      name="Changes"
+      comment=""
+    />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,10 +26,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component
+    name="SpellCheckerSettings"
+    RuntimeDictionaries="0"
+    Folders="0"
+    CustomDictionaries="0"
+    DefaultDictionary="application-level"
+    UseSingleDictionary="true"
+    transferred="true"
+  />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="743cdb2e-4beb-46fb-b6e2-f75fb91e060e" name="Changes" comment="" />
+      <changelist
+        id="743cdb2e-4beb-46fb-b6e2-f75fb91e060e"
+        name="Changes"
+        comment=""
+      />
       <created>1668476807111</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
