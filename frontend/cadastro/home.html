@@ -15,6 +15,12 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+
+      <!--JQuery-->
+      <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+      <!--Script requisição-->
+      <script src="../scripts/cadastro.js"></script>
+
   </head>
 
   <body>
@@ -178,17 +184,17 @@
     <!-- SECTION 4 - FORMULÁRIO-->
       <div class="container-fluid d-flex flex-column align-items-center section4" id="form">
         <h3 class="section4-title">Vamos embarcar juntos nessa jornada?</h3>
-        <form action="" method="post" class="form">
+        <form class="form">
           <div class="div-inside-form">
             <h4 class="form-title">Acesse sua Conta no Orange Evolution</h3>
             <input
-                class="form-control border border-dark"
-                type="text"
-                name="nome"
-                id="nome"
-                placeholder="Nome"
-                required
-              />
+              class="form-control border border-dark"
+              type="text"
+              name="nome"
+              id="nome"
+              placeholder="Nome"
+              required
+            />
             <input
               class="form-control border border-dark"
               type="email"
@@ -216,7 +222,9 @@
               placeholder="Confirmar senha"
               required
             />
-            <a href="#" class="section4-btn d-flex justify-content-center align-items-center" role="button">Acessar trilhas gratuitamente</a>
+          
+          <button class="section4-btn" type="submit" id="cadastroButton">Acessar trilhas gratuitamente</button>
+            <!-- <a href="#" class="section4-btn d-flex justify-content-center align-items-center" role="button">Acessar trilhas gratuitamente</a> -->
           </div>
         </form>
       </div>

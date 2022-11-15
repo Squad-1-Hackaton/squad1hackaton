@@ -11,6 +11,13 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!--Script requisição-->
+    <script src="../scripts/authenticatedUser.js"></script>
+    <!-- <script src="../scripts/trailsdev.js"></script> -->
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script type="text/javascript" src="/js/lib/dummy.js"></script>
     <link rel="stylesheet" href="home.css" />
@@ -37,7 +44,7 @@
           <div class="sidebar-description">
             <h5>Desenvolvimento Full-Stack</h5>
             <p>Trilha de conhecimento sobre Desenvolvimento Web Full-Stack.</p>
-            <div class="progress div-bar">
+            <div class="progress">
               <div
                 class="progress-bar bar1-progress"
                 role="progressbar"
@@ -65,25 +72,25 @@
               <div class="form-check-label div-menu-content">
                 <input class="form-check-input input-menu" type="checkbox" value="" id="firstCheckboxStretched" />
               </div>
-              <a href="#" class="form-check-label">Migração de Carreira</a>
+              <a href="#" class="form-check-label btn-topic">Migração de Carreira</a>
             </li>
             <li class="list-group-item sidebar-menu-content d-flex justify-content-start">
               <div class="form-check-label div-menu-content">
                 <input class="form-check-input input-menu" type="checkbox" value="" id="secondCheckboxStretched" />
               </div>
-              <label class="form-check-label" for="secondCheckboxStretched">Culture Code</label>
+              <a href="#" class="form-check-label btn-topic">Culture Code</a>
             </li>
             <li class="list-group-item sidebar-menu-content d-flex justify-content-start">
               <div class="form-check-label div-menu-content">
                 <input class="form-check-input input-menu" type="checkbox" value="" id="thirdCheckboxStretched" />
               </div>
-              <label class="form-check-label" for="thirdCheckboxStretched">Product Owner e Scrum</label>
+              <a href="#" class="form-check-label btn-topic">Product Owner e Scrum</a>
             </li>
             <li class="list-group-item sidebar-menu-content d-flex justify-content-start">
               <div class="form-check-label div-menu-content">
                 <input class="form-check-input input-menu" type="checkbox" value="" id="forthCheckboxStretched" />
               </div>
-              <label class="form-check-label" for="forthCheckboxStretched">Desenvolvimento</label>
+              <a href="#" class="form-check-label btn-topic">Desenvolvimento</a>
             </li>
             <li>
               <div class="title-track d-flex flex-row justify-content-start align-item-center">
@@ -99,11 +106,39 @@
         </div>
         
     <main>
-      <section class="section2">
-        
-        <div class="header-content container-fluid">
+      <div class="section2">
+        <nav class="navbar navbar-expand-lg header-content">
+          <div class="container-fluid d-flex justify-content-center align-item-center">
+            <ul class="navbar-nav d-flex flex-row justify-content-between align-item-center">
+              <li class="nav-item">
+                <span class="material-symbols-outlined md-48 nav-link">Menu</span>
+              </li>
+              <div class="div-nav d-flex flex-row justify-content-between align-item-center">
+                <li class="nav-item nav-item-author">
+                  <p class="section2-author nav-link">Conteúdo feito por <b>Orange Juice</b></p>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="section2-btn nav-link" role="button">
+                    <b> Próximo conteúdo </b>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path
+                        fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </nav>
+
+
+        <!-- <a id="menu-toggle" href="#menu">  </a> 
+        <div class="header-content container-fluid d-flex justify-content-center align-item-end">
           
-            <!--<a id="menu-toggle" href="#menu">  </a> --> 
+            
             <span class="material-symbols-outlined md-48">Menu</span>
           
           <div class="row">
@@ -123,8 +158,9 @@
               </a>
             </div>
           </div>
-        </div>
-        <div class="p-4 my-container">
+        </div> -->
+
+        <div class="my-container">
           <div class="div-content">
             <div class="div-info-content">
               <div>
@@ -172,7 +208,7 @@
             </p>
           </div>
         </div>
-      </section>
+      </div>
     </main>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
