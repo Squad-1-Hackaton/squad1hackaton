@@ -17,6 +17,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!--Script requisição-->
+    <script src="../scripts/cadastro.js"></script>
   </head>
 
   <body>
@@ -205,7 +210,7 @@
             placeholder="Confirmar senha"
             required
           />
-          <a href="#form"><button class="section4-btn">Acessar trilhas gratuitamente</button></a>
+          <button class="section4-btn" type="submit" id="cadastroButton" onclick="cadastro()">Acessar trilhas gratuitamente</button>
       </div>
     </form>
   </div>
