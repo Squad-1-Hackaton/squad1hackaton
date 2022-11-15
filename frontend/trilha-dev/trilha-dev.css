@@ -7,15 +7,15 @@
 
 
 .material-symbols-outlined {
+  display: none;
   cursor: pointer;
-  color: white;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 600,
-  'GRAD' 0,
-  'opsz' 48
-  
+  color: white;  
 }
+
+span.material-symbols-outlined-close{
+  display: none;
+}
+
 
 /* Toggle Styles */
 
@@ -116,7 +116,7 @@
 
 
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   #wrapper {
     padding-left: 280px;
   }
@@ -143,17 +143,32 @@
     position: relative;
     margin-right: 0;
   }
+
+  span.material-symbols-outlined{
+    display: none;
+  }
+
+  span.material-symbols-outlined.close{
+    display: none;
+  }
 }
 
 
 /* NOSSO CSS ADICIONAL */
-.material-symbols-outlinede {
-  display: none;
-}
+
 
 @media (max-width: 767px) {
   .material-symbols-outlined {
     display: block;
+  }
+
+  .close{
+    color: #001024;
+    display: block;
+  }
+
+  .section2-author{
+    display: none;
   }
 
 }
