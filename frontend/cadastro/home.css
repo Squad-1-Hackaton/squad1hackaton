@@ -71,7 +71,7 @@ a.nav-link{
     width: 100%;
     height: auto;
     background-color: #001024;
-    padding: 30px 0;
+    padding: 3rem 0;
 }
 
 /* .sub-section1{
@@ -89,7 +89,7 @@ a.nav-link{
     color: #FFFFFF;
 }
 
-.section1-btn{
+.section1-btn-start {
     width: 20rem;
     height: 4.8rem;
     background-color: var(--laranja-primaria);
@@ -97,12 +97,11 @@ a.nav-link{
     font-size: 1.6rem;
     font-weight: 700;
     border: none;
-    margin: 1rem 1rem 1rem 0;
     text-decoration: none;
     color: #000000;
 }
 
-.section1-btn:hover{
+.section1-btn-start:hover{
     background-color: var(--laranja-hover);
     transition: all 0.5s;
     color: #000000;
@@ -350,7 +349,7 @@ footer {
 
 @media (min-width: 1000px) {
     .sub-section1{
-        width: 67%;
+        /* width: 67%; */
         padding-top: 25px;
     }
 }
