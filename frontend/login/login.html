@@ -20,21 +20,21 @@
     />
 
     <!--JQuery-->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
     <!--Script requisição-->
     <script src="../scripts/login.js"></script>
-    
   </head>
 
   <body>
     <header>
+      <!--------------------------HEADER---------------------------->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark navigation-bar">
         <div class="container-fluid">
-          <img
-            class="logo-orange-juice-small"
-            src="../assets/logo-orange-juice-small.png"
-            alt=""
-          />
+          <img class="logo-orange-juice-small" src="../assets/logo-orange-juice-small.png" alt="" />
           <button
             class="navbar-toggler"
             type="button"
@@ -47,28 +47,14 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div
-            class="collapse navbar-collapse d-lg-flex justify-content-end"
-            id="navbarSupportedContent"
-          >
-            <ul
-              class="navbar-nav ml-auto mb-2 mb-lg-0 d-flex align-items-center justify-content-center"
-            >
+          <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0 d-flex align-items-center justify-content-center">
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./cadastro.html"
-                  >Home</a
-                >
+                <a class="nav-link active" aria-current="page" href="./cadastro.html">Home</a>
               </li>
 
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://digital.fcamara.com.br/orangejuice#rd-section-kw3vk5md"
-                  >Sobre a Orange</a
-                >
+                <a class="nav-link" href="https://digital.fcamara.com.br/orangejuice#rd-section-kw3vk5md">Sobre a Orange</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#parcerias">Parcerias</a>
@@ -89,19 +75,12 @@
       </nav>
     </header>
 
+    <!--------------------------FORMULÁRIO---------------------------->
     <main class="container-fluid">
       <form class="form">
         <div class="div-inside-form">
           <h3 class="form-title">Acesse sua Conta no Orange Evolution</h3>
-          <input
-            class="form-control border border-dark"
-            type="email"
-            id="email"
-            name="email"
-            aria-label="email"
-            placeholder="Email"
-            required
-          />
+          <input class="form-control border border-dark" type="email" id="email" name="email" aria-label="email" placeholder="Email" required />
           <input
             class="form-control border border-dark"
             type="password"
@@ -111,14 +90,7 @@
             placeholder="Senha"
             required
           />
-          <button
-            type="submit"
-            class="btn-form"
-            data-toggle="modal"
-            data-target="#exampleModalCenter"
-          >
-            Entrar
-          </button>
+          <button type="submit" class="btn-form" data-toggle="modal" data-target="#exampleModalCenter">Entrar</button>
           <div class="div-forgot-signup">
             <div class="div-anchor-forgot-password">
               <p class="form-text text-forgot">Esqueceu sua senha?</p>
@@ -147,13 +119,12 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+
     <!--Acessibilidade-->
     <script src="/frontend/acessibilidade.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
       new window.VLibras.Widget('https://vlibras.gov.br/app')
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-
   </body>
 </html>
