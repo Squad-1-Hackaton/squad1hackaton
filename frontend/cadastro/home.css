@@ -71,7 +71,7 @@ a.nav-link{
     width: 100%;
     height: auto;
     background-color: #001024;
-    padding: 30px 0;
+    padding: 3rem 0;
 }
 
 /* .sub-section1{
@@ -89,19 +89,22 @@ a.nav-link{
     color: #FFFFFF;
 }
 
-.section1-btn-start{
-    width: 16.9rem;
-    height: 3.8rem;
+.section1-btn-start {
+    width: 20rem;
+    height: 4.8rem;
     background-color: var(--laranja-primaria);
     border-radius: 0.8rem;
     font-size: 1.6rem;
     font-weight: 700;
     border: none;
+    text-decoration: none;
+    color: #000000;
 }
 
 .section1-btn-start:hover{
     background-color: var(--laranja-hover);
     transition: all 0.5s;
+    color: #000000;
 }
 
 .section2 {
@@ -187,21 +190,24 @@ a.nav-link{
 
 .section4-btn{
     height: 4.2rem;
+    width: 100%;
     background-color: var(--laranja-primaria);
     border-radius: 0.8rem;
     font-size: 1.6rem;
     font-weight: 700;
     border: none;
-    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     text-decoration: none;
-    color:#000000;
-    align-items: center;
-    justify-content: center;
+    color: #000000;
 }
 
 .btn-form:hover{
     background-color: var(--laranja-hover);
     transition: all 0.5s;
+    color: #000000;
 }
 
 
@@ -243,11 +249,7 @@ input#nome.form-control{
 input#email.form-control{
     font-size: 1.4rem;
     height: 11%;
-
     border-radius: 1rem;
-
-
-    
 }
 
 input#password.form-control{
@@ -316,7 +318,7 @@ input#confirmar-senha.form-control{
 .section6 p{
     font-weight: 400;
     font-size: 1.7rem;
-    width: 90%;
+    width: 100%;
 }
 
 .section6-btn{
@@ -328,11 +330,14 @@ input#confirmar-senha.form-control{
     font-weight: 700;
     border: none;
     margin: 1rem 1rem 1rem 0;
+    text-decoration: none;
+    color: #000000;
 }
 
 .section6-btn:hover{
     background-color: var(--laranja-hover);
     transition: all 0.5s;
+    color: #000000;
 }
 
 footer {
@@ -349,7 +354,7 @@ footer {
 
 @media (min-width: 1000px) {
     .sub-section1{
-        width: 67%;
+        /* width: 67%; */
         padding-top: 25px;
     }
 }
