@@ -179,6 +179,11 @@ a.nav-link{
     padding-bottom: 25px;
 }
 
+.btn-form{
+    width: 100%;
+    height: 3.5rem;
+}
+
 .form-title {
     margin-top: 2rem;
 }
@@ -199,7 +204,7 @@ a.nav-link{
     color: #000000;
 }
 
-.section4-btn:hover{
+.btn-form:hover{
     background-color: var(--laranja-hover);
     transition: all 0.5s;
     color: #000000;
