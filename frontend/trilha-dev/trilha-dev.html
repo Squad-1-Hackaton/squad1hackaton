@@ -11,6 +11,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script type="text/javascript" src="/js/lib/dummy.js"></script>
     <link rel="stylesheet" href="home.css" />
 
@@ -95,9 +96,10 @@
       <section class="section2">
         
         <div class="header-content container-fluid">
-          <div class="col bg-dark">
-            <a id="menu-toggle" href="#menu"> MENU </a> 
-          </div>
+          
+            <!--<a id="menu-toggle" href="#menu">  </a> --> 
+            <span class="material-symbols-outlined menu-toggle">Menu</span>
+          
           <div class="row">
             <div class="col">              
               <p class="section2-author col">Conteúdo feito por <b>Orange Juice</b></p>
@@ -177,7 +179,7 @@
 
     <!-- Menu Toggle Script -->
     <script>
-      $('#menu-toggle').click(function (e) {
+      $('.material-symbols-outlined').click(function (e) {
         e.preventDefault()
         $('#wrapper').toggleClass('toggled')
       })

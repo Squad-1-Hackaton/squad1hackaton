@@ -4,6 +4,23 @@
   box-sizing: border-box;
 }
 
+
+
+.material-symbols-outlined {
+  cursor: pointer;
+  color: white;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 600,
+  'GRAD' 0,
+  'opsz' 48
+  
+}
+
+
+
+
+
 /* Toggle Styles */
 
 #wrapper {
@@ -114,7 +131,7 @@
   }
 
   #sidebar-wrapper {
-    width: 280px;
+    width: 18rem;
   }
 
   #wrapper.toggled #sidebar-wrapper {
@@ -134,15 +151,15 @@
 
 
 /* NOSSO CSS ADICIONAL */
-#menu-toggle {
+.material-symbols-outlinede {
   display: none;
-
 }
 
 @media (max-width: 767px) {
-  #menu-toggle {
+  .material-symbols-outlined {
     display: block;
   }
+
 }
   
 
