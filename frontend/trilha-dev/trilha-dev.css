@@ -170,9 +170,30 @@ span.material-symbols-outlined-close{
   .section2-author{
     display: none;
   }
-
+  
 }
   
+
+
+@media (max-width: 330px) {
+  /* #sidebar-wrapper {
+    width: ;
+  }  */
+
+  .material-symbols-outlined {
+    display: block;
+  }
+
+  .close{
+    color: #001024;
+    display: block;
+  }
+
+  .section2-author{
+    display: none;
+  }
+}
+
 
 .section1-btn {
     background-color: rgba(255, 120, 35, 1);
