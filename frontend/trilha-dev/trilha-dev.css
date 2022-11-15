@@ -114,7 +114,59 @@ span.material-symbols-outlined-close{
   background: none;
 }
 
+.btn-topic {
+  margin: left 0;
+}
 
+.input-menu {
+  border-radius: 50%!important;
+  border-width: 0.1rem!important;
+  width: 1.5rem!important;
+  height: 1.5rem!important;
+  margin-left: 1.7rem!important;
+  border-color: rgba(0, 193, 156, 1)!important;
+}
+
+.list-group-item {
+  height: 3.5rem;
+  /* border-bottom: rgba(255, 120, 35, 1)!important;
+  border-width: 0.1rem!important; */
+}
+
+@media (max-width: 950px) {
+  .section2-author {
+    display: none!important;
+    /* background-color: #00C19C;
+    height: 2.5rem;
+    text-align: center;
+    margin: 0;
+    color: black!important;
+    width: 14rem!important;
+    margin-left: 2rem; */
+  }
+  
+  .section2-btn {
+    background-color: rgba(255, 120, 35, 1);
+    border: none;
+    border-radius: 0.5rem;
+    color: black!important;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 1rem;
+    height: 2.5rem;
+  }
+
+  .div-content {
+    padding-left: 3rem!important;
+    padding-right: 3rem!important;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    padding-right: 2rem!important;
+    /* padding-left: 5rem; */
+  }
+}
 
 @media (min-width: 768px) {
   #wrapper {
@@ -170,7 +222,10 @@ span.material-symbols-outlined-close{
   .section2-author{
     display: none;
   }
-  
+
+  .nav-item-author {
+    display: none;
+  }
 }
   
 
@@ -304,32 +359,48 @@ span.material-symbols-outlined-close{
 
 /* CONTEUDO DA PAGINA*/
 
+.section2 {
+  padding: 0;
+  margin: 0;
+}
+
 .header-content {
-    background-color: #001024;
+    background-color: #b2c3d7;
     height: 5rem;
-    padding: 0;
-    margin: 0;
-    width: 80%;
+    width: 100%;
+}
+
+.navbar-nav {
+  width: 100%;
+  padding-right: 5rem;
+  /* padding-left: 5rem; */
+}
+
+.div-nav {
+  width: 100%;
 }
 
 .section2-author {
-  color: #fff;
   background-color: #00C19C;
-  border-color: #00C19C;
   height: 2.5rem;
   text-align: center;
   margin: 0;
+  color: black!important;
+  width: 17rem;
+  margin-left: 5rem;
 }
 
 .section2-btn {
   background-color: rgba(255, 120, 35, 1);
   border: none;
   border-radius: 0.5rem;
-  color: #170600;
+  color: black!important;
   text-decoration: none;
   cursor: pointer;
   padding: 0.5rem;
   height: 2.5rem;
+  width: 12rem;
+  text-align: center;
 }
 
 
@@ -357,5 +428,7 @@ span.material-symbols-outlined-close{
 
 .div-content {
     text-align: justify;
-    padding: 6rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 3rem;
 }
