@@ -18,6 +18,12 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!--Script requisição-->
+    <script src="../scripts/login.js"></script>
+    
   </head>
 
   <body>
@@ -84,7 +90,7 @@
     </header>
 
     <main class="container-fluid">
-      <form action="login.js" method="post" class="form">
+      <form class="form">
         <div class="div-inside-form">
           <h3 class="form-title">Acesse sua Conta no Orange Evolution</h3>
           <input
@@ -106,7 +112,7 @@
             required
           />
           <button
-            type="button"
+            type="submit"
             class="btn-form"
             data-toggle="modal"
             data-target="#exampleModalCenter"
@@ -148,5 +154,6 @@
       new window.VLibras.Widget('https://vlibras.gov.br/app')
     </script>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
   </body>
 </html>
