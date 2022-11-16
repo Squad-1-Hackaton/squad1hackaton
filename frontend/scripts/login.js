@@ -10,7 +10,11 @@ function login(event) {
     const password = $('#password').val()
     
     if(!email || !password){
-        console.log('Falta preencher e-mail ou password')
+        alert('Falta preencher e-mail ou password')
+        return
+    }
+    if(password.length < 6){
+        alert('O password deverá ter mais que 6 dígitos')
         return
     }
   
@@ -18,6 +22,21 @@ function login(event) {
 }
 
 function loginAPI(email, password) {
+    // const settings = {
+    //     "url": "http://localhost:3000/login",
+    //     "method": "POST",
+    //     "timeout": 0,
+    //     "data": {
+    //       "email": email,
+    //       "password": password
+    //     }
+    //   };
+    // $.ajax(settings).done(function (response) {
+    //     sessionStorage.setItem('token_orange', response.token)
+    //     sessionStorage.setItem('user_orange', JSON.stringify(response.user))
+    //     window.location.replace("../trilhas/trilhas.html");
+    // })
+
     const settings = {
         "url": "http://localhost:3000/login",
         "method": "POST",
@@ -25,11 +44,15 @@ function loginAPI(email, password) {
         "data": {
           "email": email,
           "password": password
+        },
+        "success": function (response) {
+            sessionStorage.setItem('token_orange', response.token)
+            sessionStorage.setItem('user_orange', JSON.stringify(response.user))
+            window.location.replace("../trilhas/trilhas.html");
+        },
+        "error": function (err) {
+            alert(err.responseJSON.message)
         }
       };
-    $.ajax(settings).done(function (response) {
-        sessionStorage.setItem('token_orange', response.token)
-        sessionStorage.setItem('user_orange', JSON.stringify(response.user))
-        window.location.replace("../trilhas/trilhas.html");
-    })
+    $.ajax(settings)
 }

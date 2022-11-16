@@ -7,6 +7,13 @@
 
 :root{
     font-size: 62.5%;
+    --laranja-primaria: #FF7823;
+    --laranja-hover: #CC601C;
+    --laranja-clicked: #803C11; 
+    --marrom-cinza: #170600;
+    --full-branco: #FFFFFF;
+    --verde-agua: #00C19C;
+    --verde-hover: #009A7D;
 }
 
 html, body {
@@ -182,6 +189,8 @@ div.col.p-5{
 
 
 
+
+
 footer {
     display: flex;
     flex-direction: column;
@@ -246,4 +255,43 @@ footer {
         width: 15%;
     }
 }
+
+.card {
+    width: 30.3rem!important
+}
+
+.card-title {
+    font-weight: 700!important;
+}
+
+.div-card-btns {
+    height: auto;
+}
+
+.btn-card-access {
+    margin: 0.2rem 0;
+    background-color: rgba(255, 120, 35, 1)!important;
+    border: none!important;
+    color: black!important;
+}
+
+.btn-card-access:hover {
+    background-color: var(--laranja-hover)!important;
+    transition: all 0.5s;
+}
+
+.btn-card-delete {
+    margin: 0.2rem 0;
+    background-color: rgba(233, 233, 233, 1)!important;
+    border: none!important;
+    color: black!important;
+}
+
+.btn-card-delete:hover {
+    background-color: rgb(166, 166, 166)!important;
+    transition: all 0.5s;
+}
+
+
+
 
