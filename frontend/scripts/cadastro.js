@@ -11,12 +11,12 @@ function cadastro(event) {
     const name = $('#nome').val()
     
     if(!email || !password || !name){
-        console.log('Falta preencher e-mail, password ou nome')
+        alert('Falta preencher e-mail, password ou nome')
         return
     }
 
     if(password !== repassword){
-        console.log('Senhas não conferem')
+        alert('Senhas não conferem')
         return
     }
   
@@ -25,6 +25,20 @@ function cadastro(event) {
 
 function cadastroAPI(email, password, name) {
     $('#cadastroButton').prop("disabled", true)
+    // const settings = {
+    //     "url": "http://localhost:3000/registration",
+    //     "method": "POST",
+    //     "timeout": 0,
+    //     "data": {
+    //       "email": email,
+    //       "password": password,
+    //       "name": name
+    //     }
+    // };
+    // $.ajax(settings).done(function (response) {
+    //     window.location.assign("../login/login.html");
+    // }).fail($('#cadastroButton').prop("disabled", false))
+
     const settings = {
         "url": "http://localhost:3000/registration",
         "method": "POST",
@@ -33,9 +47,14 @@ function cadastroAPI(email, password, name) {
           "email": email,
           "password": password,
           "name": name
+        },
+        "success": function (data) {
+            window.location.assign("../login/login.html");
+        },
+        "error": function (err) {
+            alert(err.responseJSON.message)
+            $('#cadastroButton').prop("disabled", false)
         }
     };
-    $.ajax(settings).done(function (response) {
-        window.location.assign("../login/login.html");
-    }).fail($('#cadastroButton').prop("disabled", false))
+    $.ajax(settings)
 }

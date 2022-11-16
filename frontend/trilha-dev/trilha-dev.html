@@ -16,7 +16,7 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <!--Script requisição-->
     <script src="../scripts/authenticatedUser.js"></script>
-    <!-- <script src="../scripts/trailsdev.js"></script> -->
+    <script src="../scripts/trailsdev.js"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script type="text/javascript" src="/js/lib/dummy.js"></script>
@@ -36,45 +36,42 @@
           <li class="sidebar-brand d-flex flex-row justify-content-around align-items-center">
             
             <img src="../assets/orange-juice-preto-trilhas-dev.png" alt="" />
-            <a class="section1-btn d-flex justify-content-center"><strong>Voltar para trilhas</strong></a>
+            <a class="section1-btn d-flex justify-content-center" href="../trilhas/trilhas.html"><strong>Voltar para trilhas</strong></a>
             <span class="material-symbols-outlined close md-48">
               disabled_by_default
               </span>           
           </li>
           <div class="sidebar-description">
-            <h5>Desenvolvimento Full-Stack</h5>
-            <p>Trilha de conhecimento sobre Desenvolvimento Web Full-Stack.</p>
-            <div class="progress">
-              <div
-                class="progress-bar bar1-progress"
-                role="progressbar"
-                aria-label="Example with label"
-                style="width: 25%"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                25%
-              </div>
+            <!-- <h5>Desenvolvimento Full-Stack</h5> -->
+            <h5 id="trilhatitle" ></h5>
+            <!-- <p>Trilha de conhecimento sobre Desenvolvimento Web Full-Stack.</p> -->
+            <p id="trilhadescription"></p>
+            <div id="progressbar">
+              <!-- <div class="progress">
+                <div
+                  class="progress-bar bar1-progress"
+                  role="progressbar"
+                  aria-label="Example with label"
+                  style="width: 25%"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  25%
+                </div>
+              </div> -->
             </div>
           </div>
 
   
-          <ul class="sidebar-nav">
-            
-            <li class="nav-item w-100">
-              
+          <ul class="sidebar-nav" id="sidecontents">
+            <!-- <li class="nav-item w-100">
               <div class="title-track d-flex flex-row justify-content-start align-item-center">
                 <h4>1. O início</h4>
                 
               </div>
-            <li class="list-group-item sidebar-menu-content d-flex justify-content-start">
-              <div class="form-check-label div-menu-content">
-                <input class="form-check-input input-menu" type="checkbox" value="" id="firstCheckboxStretched" />
-              </div>
-              <a href="#" class="form-check-label btn-topic">Migração de Carreira</a>
-            </li>
-            <li class="list-group-item sidebar-menu-content d-flex justify-content-start">
+            </li> -->
+            <!-- <li class="list-group-item sidebar-menu-content d-flex justify-content-start">
               <div class="form-check-label div-menu-content">
                 <input class="form-check-input input-menu" type="checkbox" value="" id="secondCheckboxStretched" />
               </div>
@@ -91,8 +88,8 @@
                 <input class="form-check-input input-menu" type="checkbox" value="" id="forthCheckboxStretched" />
               </div>
               <a href="#" class="form-check-label btn-topic">Desenvolvimento</a>
-            </li>
-            <li>
+            </li> -->
+            <!-- <li>
               <div class="title-track d-flex flex-row justify-content-start align-item-center">
                 <h4>2. Conceitos básicos</h4>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
@@ -101,7 +98,7 @@
                   />
                 </svg>
               </div>
-            </li>
+            </li> -->
           </ul>
         </div>
         
@@ -164,14 +161,18 @@
           <div class="div-content">
             <div class="div-info-content">
               <div>
-                <p class="content-topic">Migração de Carreira</p>
+                <!-- <p class="content-topic">Migração de Carreira</p> -->
+                <p class="content-topic" id='migracaoinfo'></p>
               </div>
               <div>
-                <p class="content-time">06 min</p>
+                <!-- <p class="content-time">06 min</p> -->
+                <p class="content-time" id="timecontent"></p>
               </div>
             </div>
-            <h2>De advogada a desenvolvedora: um relato sobre minha migração de carreira e dicas para quem pretende seguir o mesmo caminho</h2>
-            <p class="text-dark">
+            <!-- <h2>De advogada a desenvolvedora: um relato sobre minha migração de carreira e dicas para quem pretende seguir o mesmo caminho</h2> -->
+            <h2 id="titlecontent"></h2>
+            <p class="text-dark" id="bodycontent"></p>
+            <!-- <p class="text-dark">
               A pergunta que todos já escutaram pelo menos uma vez na vida, que nos acompanha desde a infância, e que me assombrou durante a
               adolescência: “o que você vai ser quando crescer?” foi respondida pela minha versão de 17 anos, cheia de incertezas. “Bem, eu realmente
               sempre gostei de ler, e na família há tantos advogados, talvez seja algo genético afinal…”. E lá fui eu, cursar uma graduação pela qual
@@ -205,7 +206,7 @@
               Meus olhos brilharam. Comecei a procurar outros cursos e a estudar por conta própria. Um pouco depois passei a me inscrever em processos
               seletivos, em busca da primeira oportunidade no mundo tech[2]. Long story short… cá estou hoje, recém contratada como desenvolvedora
               trainee em uma renomada empresa de tecnologia!
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
