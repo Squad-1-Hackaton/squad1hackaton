@@ -20,7 +20,7 @@ async function main() {
     try {
         await prisma.trails.create({
             data: {
-                name: 'Trilha UX/UI',
+                name: 'UX/UI Design',
             },
         })
     } catch (error) {
@@ -30,7 +30,7 @@ async function main() {
     try {
         await prisma.trails.create({
             data: {
-                name: 'Trilha DEV',
+                name: 'DEV',
             },
         })
     } catch (error) {
@@ -40,7 +40,16 @@ async function main() {
     try {
         await prisma.trails.create({
             data: {
-                name: 'Trilha QA'
+                name: 'QA'
+            }
+        })
+    } catch (error) {
+        console.log('Erro na criação da trilha DEVOPS')
+    }
+    try {
+        await prisma.trails.create({
+            data: {
+                name: 'Errada'
             }
         })
     } catch (error) {
